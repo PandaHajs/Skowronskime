@@ -2,8 +2,8 @@
   <div class="layout">
     <header class="header">
       <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/presence/">idfk</g-link>
+        <g-link class="nav__link" to="/">/home</g-link>
+        <g-link class="nav__link" to="/stuff/">/stuff</g-link>
       </nav>
     </header>
     <slot/>
