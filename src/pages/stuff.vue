@@ -4,31 +4,31 @@
     <h2>Hardware</h2>
     <div id="box5">
       <div class="box4"> 
-        <p>Check</p>
+        <p>Placeholder</p>
       </div>
       <div class="box4"> 
-        <p>Check</p>
+        <p>Placeholder</p>
       </div>
       <div class="box4"> 
-        <p>Check</p>
+        <p>Placeholder</p>
       </div>
       <div class="box4"> 
-        <p>Check</p>
+        <p>Placeholder</p>
       </div>
       <div class="box4"> 
-        <p>Check</p>
+        <p>Placeholder</p>
       </div>
       <div class="box4"> 
-        <p>Check</p>
+        <p>Placeholder</p>
       </div>
       <div class="box4"> 
-        <p>Check</p>
+        <p>Placeholder</p>
       </div>
       <div class="box4"> 
-        <p>Check</p>
+        <p>Placeholder</p>
       </div>
       <div class="box4"> 
-        <p>Check</p>
+        <p>Placeholder</p>
       </div>
     </div>
     <h2>Software</h2>
