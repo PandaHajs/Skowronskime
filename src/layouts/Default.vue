@@ -3,7 +3,7 @@
     <header class="header">
       <nav class="nav">
         <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/presence/">Internet Presence</g-link>
+        <g-link class="nav__link" to="/presence/">idfk</g-link>
       </nav>
     </header>
     <slot/>

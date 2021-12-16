@@ -1,43 +1,13 @@
 <template>
   <Layout>
-    <h1>My Internet Presence</h1>
-    <div>
-      <table>
-        <tr>
-          <th>Site</th>
-          <th>Username</th>
-          <th>Link</th>
-       </tr>
-       <tr>
-         <td>Steam</td>
-         <td>Kac Biznesu</td>
-         <td><a href="https://steamcommunity.com/id/Brothersmoment/">Click</a></td>
-        </tr>
-        <tr>
-          <td>Discord</td>
-          <td>Kac Biznesu#4012</td>
-          <td>Lmao what</td>
-        </tr>
-        <tr>
-          <td>Github</td>
-          <td>PandaHajs</td>
-          <td><a href="https://github.com/PandaHajs">Click</a></td>
-        </tr>
-        <tr>
-          <td>AniList</td>
-          <td>Kac</td>
-          <td><a href="https://anilist.co/user/Kac/">Am a Weeb</a></td>
-        </tr>
-      </table>
-
-    </div>
+    <h1>I dunno what to put here</h1>
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Presence'
+    title: 'idfk'
   }
 }
 </script>

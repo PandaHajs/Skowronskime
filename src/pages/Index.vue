@@ -14,12 +14,12 @@
           who for some reason made this site without having to</p>
       </div>
       <div id="box3">
-        <button class="btn"><a href=""><img src="../discord.png"></a></button>
-        <button class="btn"><a href="https://github.com/PandaHajs"><img src="../GitHub-Emblem.png"></a></button>
-        <button class="btn"><a href=""><img src=""></a></button>
-        <button class="btn"><a href=""><img src=""></a></button>
-        <button class="btn"><a href=""><img src=""></a></button>
-        <button class="btn"><a href=""><img src=""></a></button>
+        <a href="https://discord.gg/2HC6A7zV5E"><img src="../Discord.png"></a>
+        <a href="https://github.com/PandaHajs"><img src="../github.png"></a>
+        <a href="https://steamcommunity.com/id/Brothersmoment/"><img src="../Steam.png"></a>
+        <a href="https://anilist.co/user/Kac/"><img src="../al-logo-min.png"></a>
+        <a href="https://www.reddit.com/user/RadogGuy"><img src="../logo reddit.png"></a>
+        <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo"><img src="../spotify.png"></a>
       </div>
 
   </Layout>
@@ -57,17 +57,7 @@ export default {
   grid-gap: 20px 20px;
 }
 
-.btn{
-  width: 80px;
-  height: 30px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-img{
-  width: 60px;
+img{  
   height: 30px;
   display: flex;
 }
