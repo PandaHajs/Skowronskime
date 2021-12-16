@@ -2,10 +2,10 @@
   <Layout>
       <h1>Hello There</h1>
 
-      <p>I don't really know how you got here... but here goes</p>
+      <p class="p1">I don't really know how you got here... but here goes</p>
       <div class="box">
-        <img src="../Koto.png" class="img">
-        <p>My first name's Casper but with a K and a C, 
+        <img src="../img/Koto.png" class="img">
+        <p class="p1">My first name's Casper but with a K and a C, 
           middle name's Maria, yes it can be a man's 
           name too, my surname's Skowroński
         <br><br>
@@ -14,12 +14,12 @@
           who for some reason made this site without having to</p>
       </div>
       <div id="box3">
-        <a href="https://discord.gg/2HC6A7zV5E"><img src="../Discord.png"/></a>
-        <a href="https://github.com/PandaHajs"><img src="../github.png"/></a>
-        <a href="https://steamcommunity.com/id/Brothersmoment/"><img src="../Steam.png"/></a>
-        <a href="https://anilist.co/user/Kac/"><img src="../al-logo-min.png"/></a>
-        <a href="https://www.reddit.com/user/RadogGuy"><img src="../logo reddit.png"/></a>
-        <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo"><img src="../spotify.png"/></a>
+        <a href="https://discord.gg/2HC6A7zV5E"><img src="../img/Discord.png" class="logos"/></a>
+        <a href="https://github.com/PandaHajs"><img src="../img/github.png" class="logos"/></a>
+        <a href="https://steamcommunity.com/id/Brothersmoment/"><img src="../img/Steam.png" class="logos"/></a>
+        <a href="https://anilist.co/user/Kac/"><img src="../img/al-logo-min.png" class="logos"/></a>
+        <a href="https://www.reddit.com/user/RadogGuy"><img src="../img/logo reddit.png" class="logos"/></a>
+        <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo"><img src="../img/spotify.png" class="logos"/></a>
       </div>
 
   </Layout>
@@ -33,7 +33,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.p1{
+  margin: 0px;
+  margin-bottom: 10px;
+}
 .home-links a {
   margin-right: 1rem;
 }
@@ -57,7 +61,7 @@ export default {
   grid-gap: 20px 20px;
 }
 
-img{  
+.logos{  
   height: 30px;
   display: flex;
 }
