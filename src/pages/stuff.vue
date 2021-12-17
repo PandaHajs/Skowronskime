@@ -9,7 +9,7 @@
       </div>
       <div class="box4"> 
         <h3>GPU</h3>
-        <p>GTX 1050 </p>
+        <p>GTX 1050 Ti</p>
       </div>
       <div class="box4"> 
         <h3>RAM</h3>

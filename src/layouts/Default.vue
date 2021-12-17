@@ -52,6 +52,8 @@ body {
   color:#111;
   text-decoration: none;
   transition: rgb(201, 179, 189) .5s;
+  background-color: rgb(197, 175, 185);
+  border-radius: 5px;
 }
 
 .link:hover{

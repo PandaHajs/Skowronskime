@@ -54,6 +54,11 @@ export default {
   width: 11rem;
 }
 
+a{
+  border-radius: 100%;
+  background-color: rgb(197, 175, 185);
+}
+
 a:hover{
   background-color: rgb(201, 179, 189);
   border-radius: 100%;
@@ -69,5 +74,6 @@ a:hover{
 .logos{  
   height: 30px;
   display: flex;
+  border-radius: 100%;  
 }
 </style>
