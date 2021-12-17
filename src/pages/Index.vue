@@ -18,7 +18,7 @@
         <a href="https://github.com/PandaHajs"><img src="../img/github.png" class="logos"/></a>
         <a href="https://steamcommunity.com/id/Brothersmoment/"><img src="../img/Steam.png" class="logos"/></a>
         <a href="https://anilist.co/user/Kac/"><img src="../img/al-logo-min.png" class="logos"/></a>
-        <a href="https://www.reddit.com/user/RadogGuy"><img src="../img/logo reddit.png" class="logos"/></a>
+        <a href="https://twitter.com/K4cp3rSk0wr0n"><img src="../img/twitter.png" class="logos"/></a>
         <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo"><img src="../img/spotify.png" class="logos"/></a>
       </div>
 
@@ -52,6 +52,11 @@ export default {
   border-radius: 100%;
   height: 11rem;
   width: 11rem;
+}
+
+a:hover{
+  background-color: rgb(201, 179, 189);
+  border-radius: 100%;
 }
 
 #box3{

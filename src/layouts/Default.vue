@@ -2,9 +2,9 @@
   <div class="layout">
     <header class="header">
       <nav class="nav">
-        <g-link class="nav__link" to="/">/home</g-link>
-        <g-link class="nav__link" to="/stuff/">/stuff</g-link>
-        <g-link class="nav__link" to="/gallery/">/gallery</g-link>
+        <g-link class="link" to="/">/home</g-link>
+        <g-link class="link" to="/stuff/">/stuff</g-link>
+        <g-link class="link" to="/gallery/">/gallery</g-link>
       </nav>
     </header>
     <slot/>
@@ -47,10 +47,15 @@ body {
   height: 80px;
 }
 
-.nav__link {
+.link {
   margin: 20px;
   color:#111;
   text-decoration: none;
+  transition: rgb(201, 179, 189) .5s;
+}
+
+.link:hover{
+  background-color: rgb(201, 179, 189);
 }
 
 .footer{
