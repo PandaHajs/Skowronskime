@@ -57,7 +57,7 @@ body {
 }
 
 .link:hover{
-  background-color: rgb(201, 179, 189);
+  background-color: rgb(151, 130, 139);
 }
 
 .footer{

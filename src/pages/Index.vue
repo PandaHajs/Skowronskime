@@ -14,7 +14,7 @@
           who for some reason made this site without having to</p>
       </div>
       <div id="box3">
-        <a href="https://discord.gg/2HC6A7zV5E"><img src="../img/Discord.png" class="logos"/></a>
+        <a href="https://discord.gg/2HC6A7zV5E"><img src="../img/discord.png" class="logos"/></a>
         <a href="https://github.com/PandaHajs"><img src="../img/github.png" class="logos"/></a>
         <a href="https://steamcommunity.com/id/Brothersmoment/"><img src="../img/Steam.png" class="logos"/></a>
         <a href="https://anilist.co/user/Kac/"><img src="../img/al-logo-min.png" class="logos"/></a>
@@ -60,7 +60,7 @@ a{
 }
 
 a:hover{
-  background-color: rgb(201, 179, 189);
+  background-color: rgb(151, 130, 139);
   border-radius: 100%;
 }
 
