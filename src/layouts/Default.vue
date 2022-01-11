@@ -4,7 +4,6 @@
       <nav class="nav">
         <g-link class="link" to="/">/home</g-link>
         <g-link class="link" to="/stuff/">/stuff</g-link>
-        <g-link class="link" to="/gallery/">/gallery</g-link>
       </nav>
     </header>
     <slot/>
