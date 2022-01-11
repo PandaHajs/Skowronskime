@@ -8,7 +8,7 @@
     </header>
     <slot/>
     <footer class="footer">
-      copyright © 2021 kacper skowronski.
+      copyright © 2022 kacper skowronski.
     </footer>
   </div>
 </template>
