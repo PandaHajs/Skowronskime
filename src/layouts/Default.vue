@@ -133,7 +133,7 @@ justify-content: flex-end;
 export default {
   methods:{
     check: function(){
-    const dark = localStorage.getItem('darkmode');
+    const dark = window.localStorage.getItem('darkmode');
     if(dark == 'true'){
       document.body.classList.toggle('darkmode');
     }
