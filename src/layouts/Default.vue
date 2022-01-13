@@ -133,17 +133,17 @@ justify-content: flex-end;
 export default {
   methods:{
     check: function(){
-    const dark = window.localStorage.getItem('darkmode');
-    if(dark == 'true'){
-      document.body.classList.toggle('darkmode');
-    }
-    else if(dark == 'false'){
-      document.body.classList.remove('darkmode');
-    }
+      const dark = window.localStorage.getItem('darkmode');
+      if(dark == 'true'){
+        document.body.classList.toggle('darkmode');
+      }
+      else if(dark == 'false'){
+        document.body.classList.remove('darkmode');
+      }
     },
-  change: function(){
-    let dark = localStorage.getItem('darkmode');
-    if(dark == 'false'){
+    change: function(){
+      let dark = window.localStorage.getItem('darkmode');
+      if(dark == 'false'){
         document.body.classList.add('darkmode');
         window.localStorage.setItem('darkmode', 'true');
       }
@@ -151,7 +151,7 @@ export default {
         document.body.classList.remove('darkmode');
         window.localStorage.setItem('darkmode', 'false');
      }
-  },
+    },
   },
   mounted(){
     this.check();
