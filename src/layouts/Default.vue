@@ -5,6 +5,10 @@
         <g-link class="link" to="/">/home</g-link>
         <g-link class="link" to="/stuff/">/stuff</g-link>
       </nav>
+      <button id='theme' v-on:click="change">
+        <p id='chk'>a</p>
+        <img src='../img/sun.png' id="image">
+      </button>
     </header>
     <slot/>
     <footer class="footer">
@@ -27,8 +31,8 @@ body {
   margin:0;
   padding:0;
   line-height: 1.5;
-  background-color: rgb(184, 161, 171);
-  color: #111;
+  background-color: var(--maincolor);
+  color: var(--textcolor);
 }
 
 .layout {
@@ -46,17 +50,18 @@ body {
   height: 80px;
 }
 
-.link {
+.link{
   margin: 20px;
-  color:#111;
+  color: var(--textcolor) ;
   text-decoration: none;
-  transition: rgb(201, 179, 189) .5s;
-  background-color: rgb(197, 175, 185);
+  background-color: var(--buttoncolor);
   border-radius: 5px;
+  border: 1px solid var(--buttoncolor); 
 }
 
 .link:hover{
-  background-color: rgb(151, 130, 139);
+  background-color: var(--buttonhover);
+  border: 1px solid black;
 }
 
 .footer{
@@ -68,4 +73,88 @@ width: 58%;
 justify-content: flex-end;
 }
 
+#theme{
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;  
+  border: 0;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  background-color: var(--buttoncolor);
+}
+
+#theme:hover{
+  border: 1px solid black;
+  background-color: var(--darkmodebutton);
+}
+
+#image{
+  width: 20px;
+  height: 20px;
+}
+
+#chk{
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+
+.link2{
+  border-radius: 100%;
+  background-color: var(--buttoncolor);
+  border: 1px solid var(--maincolor);
+}
+
+.link2:hover{
+  background-color: var(--buttonhover);
+  border: 1px solid black;
+}
+
+:root{
+  --buttonhover: rgb(151, 130, 139);
+  --maincolor: rgb(184, 161, 171);
+  --buttoncolor: rgb(197, 175, 185);
+  --textcolor: black;
+  --darkmodebutton: #2c3e50;
+}
+
+.darkmode{
+  --maincolor: #2c3e50;
+  --buttonhover: #9b59b6;
+  --buttoncolor: #34495e;
+  --textcolor: white;
+  --darkmodebutton: rgb(184, 161, 171);
+}
+
 </style>
+
+<script>
+export default {
+  methods:{
+    check: function(){
+    const dark = localStorage.getItem('darkmode');
+    if(dark == 'true'){
+      document.body.classList.toggle('darkmode');
+    }
+    else if(dark == 'false'){
+      document.body.classList.remove('darkmode');
+    }
+    },
+  change: function(){
+    let dark = localStorage.getItem('darkmode');
+    if(dark == 'false'){
+        document.body.classList.add('darkmode');
+        window.localStorage.setItem('darkmode', 'true');
+      }
+      else if(dark == 'true'){
+        document.body.classList.remove('darkmode');
+        window.localStorage.setItem('darkmode', 'false');
+     }
+  },
+  },
+  created: function(){
+    this.check();
+  }
+}
+</script>

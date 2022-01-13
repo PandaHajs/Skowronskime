@@ -14,12 +14,12 @@
           who for some reason made this site without having to</p>
       </div>
       <div id="box3">
-        <a href="https://discord.gg/2HC6A7zV5E"><img src="../img/Discord.png" class="logos"/></a>
-        <a href="https://github.com/PandaHajs"><img src="../img/github.png" class="logos"/></a>
-        <a href="https://steamcommunity.com/id/Brothersmoment/"><img src="../img/Steam.png" class="logos"/></a>
-        <a href="https://anilist.co/user/Kac/"><img src="../img/al-logo-min.png" class="logos"/></a>
-        <a href="https://twitter.com/K4cp3rSk0wr0n"><img src="../img/twitter.png" class="logos"/></a>
-        <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo"><img src="../img/spotify.png" class="logos"/></a>
+        <a href="https://discord.gg/2HC6A7zV5E" class="link2"><img src="../img/Discord.png" class="logos"/></a>
+        <a href="https://github.com/PandaHajs" class="link2"><img src="../img/github.png" class="logos"/></a>
+        <a href="https://steamcommunity.com/id/Brothersmoment/" class="link2"><img src="../img/Steam.png" class="logos"/></a>
+        <a href="https://anilist.co/user/Kac/" class="link2"><img src="../img/al-logo-min.png" class="logos"/></a>
+        <a href="https://twitter.com/K4cp3rSk0wr0n" class="link2"><img src="../img/twitter.png" class="logos"/></a>
+        <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo" class="link2"><img src="../img/spotify.png" class="logos"/></a>
       </div>
 
   </Layout>
@@ -52,16 +52,6 @@ export default {
   border-radius: 100%;
   height: 11rem;
   width: 11rem;
-}
-
-a{
-  border-radius: 100%;
-  background-color: rgb(197, 175, 185);
-}
-
-a:hover{
-  background-color: rgb(151, 130, 139);
-  border-radius: 100%;
 }
 
 #box3{
