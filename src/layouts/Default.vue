@@ -153,7 +153,7 @@ export default {
      }
   },
   },
-  mounted: function(){
+  mounted(){
     this.check();
   }
 }
