@@ -143,7 +143,7 @@ export default {
     },
     change: function(){
       let dark = window.localStorage.getItem('darkmode');
-      if(dark == 'false' || dark == ''){
+      if(dark == 'false' || !window.localStorage.getItem('darkmode')){
         document.body.classList.add('darkmode');
         window.localStorage.setItem('darkmode', 'true');
       }
