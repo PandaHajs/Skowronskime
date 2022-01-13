@@ -5,12 +5,12 @@
         <g-link class="link" to="/">/home</g-link>
         <g-link class="link" to="/stuff/">/stuff</g-link>
       </nav>
-      <button id='theme' v-on:click="change">
-        <p id='chk'>a</p>
-        <img src='../img/sun.png' id="image">
+      <button id="theme" v-on:click="change">
+        <p id="chk">a</p>
+        <img src="../img/sun.png" id="image" />
       </button>
     </header>
-    <slot/>
+    <slot />
     <footer class="footer">
       copyright © 2022 kacper skowronski.
     </footer>
@@ -27,9 +27,10 @@ query {
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
   background-color: var(--maincolor);
   color: var(--textcolor);
@@ -50,33 +51,33 @@ body {
   height: 80px;
 }
 
-.link{
+.link {
   margin: 20px;
-  color: var(--textcolor) ;
+  color: var(--textcolor);
   text-decoration: none;
   background-color: var(--buttoncolor);
   border-radius: 5px;
-  border: 1px solid var(--buttoncolor); 
+  border: 1px solid var(--buttoncolor);
 }
 
-.link:hover{
+.link:hover {
   background-color: var(--buttonhover);
   border: 1px solid black;
 }
 
-.footer{
-position: absolute;
-bottom: 0;
-display: flex;
-padding: 5px;
-width: 58%;
-justify-content: flex-end;
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  padding: 5px;
+  width: 58%;
+  justify-content: flex-end;
 }
 
-#theme{
+#theme {
   width: 25px;
   height: 25px;
-  border-radius: 100%;  
+  border-radius: 100%;
   border: 0;
   justify-content: space-around;
   display: flex;
@@ -84,34 +85,34 @@ justify-content: flex-end;
   background-color: var(--buttoncolor);
 }
 
-#theme:hover{
+#theme:hover {
   border: 1px solid black;
   background-color: var(--darkmodebutton);
 }
 
-#image{
+#image {
   width: 20px;
   height: 20px;
 }
 
-#chk{
+#chk {
   visibility: hidden;
   width: 0px;
   height: 0px;
 }
 
-.link2{
+.link2 {
   border-radius: 100%;
   background-color: var(--buttoncolor);
   border: 1px solid var(--maincolor);
 }
 
-.link2:hover{
+.link2:hover {
   background-color: var(--buttonhover);
   border: 1px solid black;
 }
 
-:root{
+:root {
   --buttonhover: rgb(151, 130, 139);
   --maincolor: rgb(184, 161, 171);
   --buttoncolor: rgb(197, 175, 185);
@@ -119,42 +120,39 @@ justify-content: flex-end;
   --darkmodebutton: #2c3e50;
 }
 
-.darkmode{
+.darkmode {
   --maincolor: #2c3e50;
   --buttonhover: #9b59b6;
   --buttoncolor: #34495e;
   --textcolor: white;
   --darkmodebutton: rgb(184, 161, 171);
 }
-
 </style>
 
 <script>
 export default {
-  methods:{
-    check: function(){
-      const dark = window.localStorage.getItem('darkmode');
-      if(dark == 'true'){
-        document.body.classList.toggle('darkmode');
-      }
-      else if(dark == 'false'){
-        document.body.classList.remove('darkmode');
+  methods: {
+    check: function() {
+      const dark = window.localStorage.getItem("darkmode");
+      if (dark == "true") {
+        document.body.classList.add("darkmode");
+      } else if (dark == "false") {
+        document.body.classList.remove("darkmode");
       }
     },
-    change: function(){
-      let dark = window.localStorage.getItem('darkmode');
-      if(dark == 'false' || !window.localStorage.getItem('darkmode')){
-        document.body.classList.add('darkmode');
-        window.localStorage.setItem('darkmode', 'true');
+    change: function() {
+      let dark = window.localStorage.getItem("darkmode");
+      if (dark == "false" || !window.localStorage.getItem("darkmode")) {
+        document.body.classList.add("darkmode");
+        window.localStorage.setItem("darkmode", "true");
+      } else if (dark == "true") {
+        document.body.classList.remove("darkmode");
+        window.localStorage.setItem("darkmode", "false");
       }
-      else if(dark == 'true'){
-        document.body.classList.remove('darkmode');
-        window.localStorage.setItem('darkmode', 'false');
-     }
-    },
+    }
   },
-  mounted(){
+  mounted() {
     this.check();
   }
-}
+};
 </script>
