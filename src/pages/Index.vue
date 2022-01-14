@@ -15,24 +15,24 @@
     </div>
     <div id="box3">
       <a href="https://discord.gg/2HC6A7zV5E" class="link2"
-        ><img src="../img/discord.svg" class="logos"
+        ><img src="@/img/discord.svg" class="logos"
       /></a>
       <a href="https://github.com/PandaHajs" class="link2"
-        ><img src="../img/github.svg" class="logos"
+        ><img src="@/img/github.svg" class="logos"
       /></a>
       <a href="https://steamcommunity.com/id/Brothersmoment/" class="link2"
-        ><img src="../img/steam.svg" class="logos"
+        ><img src="@/img/steam.svg" class="logos"
       /></a>
       <a href="https://anilist.co/user/Kac/" class="link2"
-        ><img src="../img/anilist.svg" class="logos"
+        ><img src="@/img/anilist.svg" class="logos"
       /></a>
       <a href="https://twitter.com/K4cp3rSk0wr0n" class="link2"
-        ><img src="../img/twitter.svg" class="logos"
+        ><img src="@/img/twitter.svg" class="logos"
       /></a>
       <a
         href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo"
         class="link2"
-        ><img src="../img/spotify.svg" class="logos"
+        ><img src="@/img/spotify.svg" class="logos"
       /></a>
     </div>
   </Layout>

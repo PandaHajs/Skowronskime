@@ -7,7 +7,8 @@
       </nav>
       <button id="theme" v-on:click="change">
         <p id="chk">a</p>
-        <img src="../img/sun.svg" id="image" />
+        <img id="moon" src="@/img/moon.svg" />
+        <img id="sun" src="@/img/sun.svg" />
       </button>
     </header>
     <slot />
@@ -90,10 +91,20 @@ body {
   background-color: var(--darkmodebutton);
 }
 
-#image {
+#moon,
+#sun {
   width: 20px;
   height: 20px;
   filter: invert(var(--logocolor));
+  position: absolute;
+}
+
+#moon {
+  visibility: var(--lightmodevisibility);
+}
+
+#sun {
+  visibility: var(--darkmodevisibility);
 }
 
 #chk {
@@ -125,6 +136,8 @@ body {
   --textcolor: black;
   --darkmodebutton: #2c3e50;
   --logocolor: 0;
+  --darkmodevisibility: hidden;
+  --lightmodevisibility: visible;
 }
 
 .darkmode {
@@ -134,6 +147,8 @@ body {
   --textcolor: white;
   --darkmodebutton: rgb(184, 161, 171);
   --logocolor: 1;
+  --darkmodevisibility: visible;
+  --lightmodevisibility: hidden;
 }
 </style>
 
