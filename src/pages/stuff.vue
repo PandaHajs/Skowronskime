@@ -43,16 +43,16 @@
     <h2>Software</h2>
     <div id="box5">
       <div class="box4">
-        <h3>Placeholder</h3>
-        <p>Placeholder</p>
+        <h3>IDE</h3>
+        <p>Visual Studio Code</p>
       </div>
       <div class="box4">
-        <h3>Placeholder</h3>
-        <p>Placeholder</p>
+        <h3>Wallpaper</h3>
+        <p>Wallpaper Engine</p>
       </div>
       <div class="box4">
-        <h3>Placeholder</h3>
-        <p>Placeholder</p>
+        <h3>Recording Software</h3>
+        <p>OBS</p>
       </div>
       <div class="box4">
         <h3>Placeholder</h3>

@@ -7,7 +7,7 @@
       </nav>
       <button id="theme" v-on:click="change">
         <p id="chk">a</p>
-        <img src="../img/sun.png" id="image" />
+        <img src="../img/sun.svg" id="image" />
       </button>
     </header>
     <slot />
@@ -93,6 +93,7 @@ body {
 #image {
   width: 20px;
   height: 20px;
+  filter: invert(var(--logocolor));
 }
 
 #chk {
@@ -105,6 +106,11 @@ body {
   border-radius: 100%;
   background-color: var(--buttoncolor);
   border: 1px solid var(--maincolor);
+  height: 38px;
+  width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .link2:hover {
@@ -118,6 +124,7 @@ body {
   --buttoncolor: rgb(197, 175, 185);
   --textcolor: black;
   --darkmodebutton: #2c3e50;
+  --logocolor: 0;
 }
 
 .darkmode {
@@ -126,6 +133,7 @@ body {
   --buttoncolor: #34495e;
   --textcolor: white;
   --darkmodebutton: rgb(184, 161, 171);
+  --logocolor: 1;
 }
 </style>
 
