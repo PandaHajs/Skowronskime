@@ -35,6 +35,7 @@ body {
   line-height: 1.5;
   background-color: var(--maincolor);
   color: var(--textcolor);
+  transition: all 0.75s;
 }
 
 .layout {
