@@ -17,15 +17,15 @@
       </div>
       <div class="box4">
         <h3>Mouse</h3>
-        <p>Placeholder</p>
+        <p>SilverCrest SGM 4000 A1</p>
       </div>
       <div class="box4">
         <h3>Keyboard</h3>
-        <p>Placeholder</p>
+        <p>Cooler Master Masterkeys Lite L</p>
       </div>
       <div class="box4">
         <h3>Headphones</h3>
-        <p>Placeholder</p>
+        <p>SoundBlaster Tactic3D Rage</p>
       </div>
       <div class="box4">
         <h3>Laptop</h3>

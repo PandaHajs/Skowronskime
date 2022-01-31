@@ -4,7 +4,7 @@
 
     <p class="p1">I don't really know how you got here... but here goes</p>
     <div class="box">
-      <img src="../img/Koto.png" class="img" />
+      <img src="@/img/Koto.png" class="img" />
       <p class="p1">
         My first name's Casper but with a K and a C, middle name's Maria, yes it
         can be a man's name too, my surname's Skowroński <br /><br />
