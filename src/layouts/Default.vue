@@ -151,6 +151,24 @@ body {
   --darkmodevisibility: visible;
   --lightmodevisibility: hidden;
 }
+
+@keyframes Slidetop {
+  0% {
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes Slidemid {
+  0% {
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 </style>
 
 <script>

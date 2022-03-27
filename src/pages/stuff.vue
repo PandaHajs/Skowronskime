@@ -108,5 +108,19 @@ h3 {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 20px;
+  animation: 1.5s ease-out 0s 1 Slidetop;
+}
+
+h2,
+h1 {
+  animation: 1s ease-out 0s 1 Slidetop;
+}
+@keyframes Slidetop {
+  0% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 </style>

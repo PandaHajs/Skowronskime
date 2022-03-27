@@ -79,4 +79,18 @@ export default {
   display: flex;
   filter: invert(var(--logocolor));
 }
+@keyframes Slidetop {
+  0% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#box3,
+.box,
+.p1,
+h1 {
+  animation: 1s ease-out 0s 1 Slidetop;
+}
 </style>
