@@ -7,7 +7,9 @@ export default function Home() {
       <Layout>
         <p>I don&apos;t really know how you got here... but here goes</p>
         <div className="box">
-          <Image src="/Koto.png" alt="Koto" width={100} height={100} />
+          <span className="box-img">
+            <Image src="/Koto.png" alt="Koto" width={500} height={500} />
+          </span>
           <p>
             My first name&apos;s Casper but with a K and a C, middle name&apos;s
             Maria, yes it can be a man&apos;s name too, my surname&apos;s
@@ -21,21 +23,16 @@ export default function Home() {
         </div>
         <div className="links">
           <a href="">
-            <Image
-              src="/linkedin.svg/"
-              width={100}
-              height={100}
-              alt="LinkedIn"
-            />
+            <Image src="/linkedin.svg" width={100} height={100} alt="Linked" />
           </a>
           <a href="https://github.com/PandaHajs">
-            <Image src="/github.svg/" width={100} height={100} alt="Github" />
+            <Image src="/github.svg" width={100} height={100} alt="Github" />
           </a>
           <a href="">
-            <Image src="/steam.svg/" width={100} height={100} alt="Steam" />
+            <Image src="/steam.svg" width={100} height={100} alt="Steam" />
           </a>
           <a href="">
-            <Image src="/spotify.svg/" width={100} height={100} alt="Spotify" />
+            <Image src="/spotify.svg" width={100} height={100} alt="Spotify" />
           </a>
         </div>
       </Layout>
@@ -44,6 +41,11 @@ export default function Home() {
         .box img {
           height: 150px;
           border-radius: 100%;
+        }
+        .box-img {
+          border-radius: 100%;
+          overflow: hidden;
+          display: flex;
         }
         .box {
           display: flex;
@@ -70,14 +72,15 @@ export default function Home() {
 
         .links a {
           height: 46px;
-          width: 42px;
+          width: 46px;
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 2px;
           border-radius: 100%;
+          overflow: hidden;
         }
-        .links Image:hover {
+        .links a:hover {
           background-color: red;
         }
         .links {
