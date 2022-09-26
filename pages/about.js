@@ -5,16 +5,18 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <p>I don't really know how you got here... but here goes</p>
+        <p>I don&apos;t really know how you got here... but here goes</p>
         <div className="box">
           <Image src="/Koto.png" alt="Koto" width={100} height={100} />
           <p>
-            My first name's Casper but with a K and a C, middle name's Maria,
-            yes it can be a man's name too, my surname's Skowroński
+            My first name&apos;s Casper but with a K and a C, middle name&apos;s
+            Maria, yes it can be a man&apos;s name too, my surname&apos;s
+            Skowroński
             <br />
             <br /> A 17 year old IT Student from Poland with the life motto “If
-            I don't have to do it, I won't. If I have to do it, I'll make it
-            quick.”, who for some reason made this site without having to
+            I don&apos;t have to do it, I won&apos;t. If I have to do it,
+            I&apos;ll make it quick.”, who for some reason made this site
+            without having to
           </p>
         </div>
         <div className="links">
