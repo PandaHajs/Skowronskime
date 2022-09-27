@@ -69,6 +69,11 @@ export default function Layout({ children }) {
           flex-direction: column;
           height: 100vh;
         }
+        @media (max-width: 768px) {
+          main {
+            padding-left: 3vw;
+            padding-right: 3vw;
+          }
       `}</style>
     </div>
   );

@@ -5,11 +5,11 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <p>I don&apos;t really know how you got here... but here goes</p>
         <div className="box">
-          <span className="box-img">
-            <Image src="/Koto.png" alt="Koto" width={500} height={500} />
-          </span>
+          <div className="box-img">
+            <Image src="/Koto.png" alt="Koto" width={200} height={200} />
+          </div>
+          <p>I don&apos;t really know how you got here... but here goes</p>
           <p>
             My first name&apos;s Casper but with a K and a C, middle name&apos;s
             Maria, yes it can be a man&apos;s name too, my surname&apos;s
@@ -22,17 +22,17 @@ export default function Home() {
           </p>
         </div>
         <div className="links">
-          <a href="">
-            <Image src="/linkedin.svg" width={100} height={100} alt="Linked" />
+          <a href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/">
+            <Image src="/linkedin.svg" width={50} height={50} alt="Linked" />
           </a>
           <a href="https://github.com/PandaHajs">
-            <Image src="/github.svg" width={100} height={100} alt="Github" />
+            <Image src="/github.svg" width={50} height={50} alt="Github" />
           </a>
-          <a href="">
-            <Image src="/steam.svg" width={100} height={100} alt="Steam" />
+          <a href="https://steamcommunity.com/id/Brothersmoment">
+            <Image src="/steam.svg" width={50} height={50} alt="Steam" />
           </a>
-          <a href="">
-            <Image src="/spotify.svg" width={100} height={100} alt="Spotify" />
+          <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo?si=12fdb2fb1b954d54">
+            <Image src="/spotify.svg" width={50} height={50} alt="Spotify" />
           </a>
         </div>
       </Layout>
@@ -52,6 +52,7 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           margin: 5px;
+          flex-direction: column;
         }
         .box p {
           padding: 0 20px;
@@ -66,8 +67,8 @@ export default function Home() {
           margin: 5px;
           border-radius: 100%;
         }
-        .links Image:nth-child(2) {
-          border-radius: 0%;
+        .links a:nth-child(1) {
+          border-radius: 5%;
         }
 
         .links a {
