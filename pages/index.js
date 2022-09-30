@@ -82,7 +82,7 @@ export default function Home() {
         .box p {
           padding: 0 20px;
         }
-        .stuff h1 {
+        .anim h1 {
           font-size: 10vh;
         }
         .links Image {
