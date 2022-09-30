@@ -6,12 +6,12 @@ export default function Home() {
     <>
       <Layout>
         <div className="big-box">
-          <div className="stuff">
+          <div className="anim">
             <h1>I DID THIS</h1>
             <h1>FOR NO REASON</h1>
             <h1>AT ALL</h1>
           </div>
-          <div className="test">
+          <div className="main">
             <div className="box">
               <div className="box-img">
                 <Image src="/Koto.png" alt="Koto" width={200} height={200} />
@@ -57,11 +57,10 @@ export default function Home() {
       </Layout>
 
       <style jsx>{`
-        .test {
+        .main {
           animation: fadein 10s;
         }
-        .stuff {
-          display: ;
+        .anim {
           position: absolute;
         }
         .box img {
@@ -83,9 +82,8 @@ export default function Home() {
         .box p {
           padding: 0 20px;
         }
-        h1 {
-          font-size: 50px;
-          font-family: ;
+        .stuff h1 {
+          font-size: 10vh;
         }
         .links Image {
           height: 30px;
