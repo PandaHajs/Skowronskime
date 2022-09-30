@@ -62,7 +62,7 @@ export default function Layout({ children }) {
           align-items: left;
           padding-left: 30vw;
           padding-right: 30vw;
-          padding-top: 150px;
+          padding-top: 5vh;
         }
         .container {
           display: flex;
