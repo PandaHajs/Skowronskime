@@ -22,7 +22,7 @@ export default function Home() {
                 name&apos;s Maria, yes it can be a man&apos;s name too, my
                 surname&apos;s Skowroński
                 <br />
-                <br /> A 17 year old IT Student from Poland with the life motto
+                <br /> An 18 year old IT Student from Poland with the life motto
                 “If I don&apos;t have to do it, I won&apos;t. If I have to do
                 it, I&apos;ll make it quick.”, who for some reason made this
                 site without having to
