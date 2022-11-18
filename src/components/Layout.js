@@ -35,6 +35,11 @@ export default function Layout({ children }) {
         }
         a {
           padding: 5px;
+          text-decoration: none;
+          color: #000;
+        }
+        a:hover {
+          animation: why 1s;
         }
         header {
           display: flex;
@@ -74,6 +79,34 @@ export default function Layout({ children }) {
             padding-left: 3vw;
             padding-right: 3vw;
           }
+        }
+        @keyframes why {
+          0% {
+            transform: rotate(0deg);
+            color: red;
+          }
+          15% {
+            color: orange;
+          }
+          30% {
+            color: yellow;
+          }
+          45% {
+            color: green;
+          }
+          60% {
+            color: blue;
+          }
+          75% {
+            color: indigo;
+          }
+          90% {
+            color: violet;
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
       `}</style>
     </div>
   );
