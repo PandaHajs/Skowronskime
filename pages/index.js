@@ -52,11 +52,11 @@ export default function Home() {
         .box-img {
           border-radius: 100%;
           overflow: hidden;
-          animation: spin 10s normal;
+          animation: spin 3s normal;
           display: flex;
         }
         .test {
-          animation: slide 10s normal;
+          animation: slide 3s normal;
         }
         .box {
           display: flex;
@@ -102,14 +102,16 @@ export default function Home() {
         @keyframes spin {
           0% {
             transform: rotate(0deg);
+            opacity: 0;
           }
           100% {
             transform: rotate(359deg);
+            opacity: 1;
           }
         }
         @keyframes slide {
           0% {
-            transform: translateX(-1000px);
+            transform: translateX(-300px);
           }
           100% {
             transform: translateX(0px);
