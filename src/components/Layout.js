@@ -27,6 +27,9 @@ export default function Layout({ children }) {
         <p>copyright © 2022 Kacper Skowronski</p>
       </footer>
       <style jsx>{`
+        * {
+          color: white;
+        }
         nav {
           display: flex;
           align-items: center;
@@ -36,7 +39,7 @@ export default function Layout({ children }) {
         a {
           padding: 5px;
           text-decoration: none;
-          color: #000;
+          color: white;
         }
         a:hover {
           animation: why 1s;
@@ -45,7 +48,7 @@ export default function Layout({ children }) {
           display: flex;
           align-items: center;
           justify-content: left;
-          background-color: pink;
+          background-color: #26262a;
           height: 5vh;
           width: 100%;
         }
@@ -53,9 +56,8 @@ export default function Layout({ children }) {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: pink;
+          background-color: #26262a;
           height: 5vh;
-          margin-top: auto;
           width: 100%;
         }
         footer p {
@@ -68,6 +70,8 @@ export default function Layout({ children }) {
           padding-left: 30vw;
           padding-right: 30vw;
           padding-top: 5vh;
+          height: 90vh;
+          background-color: #26262a;
         }
         .container {
           display: flex;

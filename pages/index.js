@@ -10,44 +10,50 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <div className={isActive ? "" : "test2"} onLoad={handeLoad}>
-          <div className="box">
+        <div className="box">
+          <div className={isActive ? "" : "box-img-2"} onLoad={handeLoad}>
             <div className="test">
               <div className="box-img">
                 <Image src="/Koto.png" alt="Koto" width={200} height={200} />
               </div>
             </div>
-            <p>I don&apos;t really know how you got here... but here goes</p>
-            <p>
-              My first name&apos;s Casper but with a K and a C, middle
-              name&apos;s Maria, yes it can be a man&apos;s name too, my
-              surname&apos;s Skowroński
-              <br />
-              <br /> An 18 year old IT Student from Poland with the life motto
-              “If I don&apos;t have to do it, I won&apos;t. If I have to do it,
-              I&apos;ll make it quick.”, who for some reason made this site
-              without having to
-            </p>
           </div>
-          <div className="links">
-            <a href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/">
-              <Image src="/linkedin.svg" width={50} height={50} alt="Linked" />
-            </a>
-            <a href="https://github.com/PandaHajs">
-              <Image src="/github.svg" width={50} height={50} alt="Github" />
-            </a>
-            <a href="https://steamcommunity.com/id/Brothersmoment">
-              <Image src="/steam.svg" width={50} height={50} alt="Steam" />
-            </a>
-            <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo?si=12fdb2fb1b954d54">
-              <Image src="/spotify.svg" width={50} height={50} alt="Spotify" />
-            </a>
-          </div>
+
+          <p>I don&apos;t really know how you got here... but here goes</p>
+          <p>
+            My first name&apos;s Casper but with a K and a C, middle name&apos;s
+            Maria, yes it can be a man&apos;s name too, my surname&apos;s
+            Skowroński
+            <br />
+            <br /> An 18 year old IT Student from Poland with the life motto “If
+            I don&apos;t have to do it, I won&apos;t. If I have to do it,
+            I&apos;ll make it quick.”, who for some reason made this site
+            without having to
+          </p>
+        </div>
+        <div className="links">
+          <a href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/">
+            <img src="/linkedin.svg" alt="Linked" />
+          </a>
+          <a href="https://github.com/PandaHajs">
+            <img src="/github.svg" alt="Github" />
+          </a>
+          <a href="https://steamcommunity.com/id/Brothersmoment">
+            <img src="/steam.svg" alt="Steam" />
+          </a>
+          <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo?si=12fdb2fb1b954d54">
+            <img src="/spotify.svg" alt="Spotify" />
+          </a>
         </div>
       </Layout>
       <style jsx>{`
-        .test2 * {
-          animation: none !important;
+        img {
+          width: 50px;
+          height: 50px;
+          filter: invert(100%);
+        }
+        .box-img-2 * {
+          animation: none;
         }
         .box-img {
           border-radius: 100%;
@@ -68,12 +74,6 @@ export default function Home() {
         .box p {
           padding: 0 20px;
         }
-        .links Image {
-          height: 30px;
-          width: 30px;
-          margin: 5px;
-          border-radius: 100%;
-        }
         .links a:nth-child(1) {
           border-radius: 5%;
         }
@@ -89,8 +89,11 @@ export default function Home() {
           overflow: hidden;
           transition: 0.5s;
         }
+         {
+          filter: brightness(0) invert(1);
+        }
         .links a:hover {
-          background-color: red;
+          background-color: #ff0022;
         }
         .links {
           display: flex;
