@@ -33,16 +33,28 @@ export default function Home() {
         </div>
         <div className="links">
           <a href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/">
-            <img src="/linkedin.svg" alt="Linked" />
+            <picture>
+              <source srcSet="/linkedin.svg" type="image/svg" />
+              <img src="/linkedin.svg" alt="Linked" />
+            </picture>
           </a>
           <a href="https://github.com/PandaHajs">
-            <img src="/github.svg" alt="Github" />
+            <picture>
+              <source srcSet="/github.svg" type="image/svg" />
+              <img src="/github.svg" alt="Github" />
+            </picture>
           </a>
           <a href="https://steamcommunity.com/id/Brothersmoment">
-            <img src="/steam.svg" alt="Steam" />
+            <picture>
+              <source srcSet="/steam.svg" type="image/svg" />
+              <img src="/steam.svg" alt="Steam" />
+            </picture>
           </a>
           <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo?si=12fdb2fb1b954d54">
-            <img src="/spotify.svg" alt="Spotify" />
+            <picture>
+              <source srcSet="/spotify.svg" type="image/svg" />
+              <img src="/spotify.svg" alt="Spotify" />
+            </picture>
           </a>
         </div>
       </Layout>
