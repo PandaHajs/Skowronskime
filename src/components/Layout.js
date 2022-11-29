@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <div className="container">
       <Head>
-        <title>Skowronski.me</title>
+        <title>Skowronski</title>
         <link rel="icon" href="/Koto.png" />
       </Head>
 
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
           color: white;
         }
         a:hover {
-          animation: why 1s;
+          animation: rainbow 10s ease-in-out;
         }
         header {
           display: flex;
@@ -84,7 +84,7 @@ export default function Layout({ children }) {
             padding-right: 3vw;
           }
         }
-        @keyframes why {
+        @keyframes rainbow {
           0% {
             transform: rotate(0deg);
             color: red;
@@ -108,7 +108,7 @@ export default function Layout({ children }) {
             color: violet;
           }
           100% {
-            transform: rotate(360deg);
+            transform: rotate(14400deg);
           }
         }
       `}</style>

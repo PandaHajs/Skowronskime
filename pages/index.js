@@ -14,7 +14,7 @@ export default function Home() {
           <div className={isActive ? "" : "box-img-2"} onLoad={handleLoad}>
             <div className="animation2">
               <div className="box-img">
-                <Image src="/Koto.png" alt="Koto" width={200} height={200} />
+                <Image src="/ja2.jpg" alt="Koto" width={200} height={200} />
               </div>
             </div>
           </div>
