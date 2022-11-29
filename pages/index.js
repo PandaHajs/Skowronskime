@@ -64,20 +64,20 @@ export default function Home() {
       <style jsx>{`
         .text2 {
           animation: opacity 5s normal;
-          opacity: 1;
         }
         img {
           width: 50px;
           height: 50px;
           filter: invert(100%);
           border-radius: 100%;
+          transition: 0.5s;
+          margin: 5px;
         }
         .links_an {
           animation: opacity2 3s ease-in-out;
         }
         img:hover {
           background-color: #00ffcc;
-          transition: 0.5s;
         }
         .links a:nth-child(1) img {
           border-radius: 5% !important;
@@ -111,7 +111,7 @@ export default function Home() {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: 2px;
+          margin: 5px;
 
           transition: 0.5s;
         }
