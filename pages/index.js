@@ -1,38 +1,49 @@
 import Layout from "../src/components/Layout";
-import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const names = [
+    "IT Student",
+    "Kac Biznesu",
+    "Some random guy",
+    "The perfect victim",
+  ];
+  const [name, setName] = useState("");
+  useEffect(() => {
+    setName(names[Math.floor(Math.random() * names.length)]);
+  }, []);
+
   const [isActive, setIsActive] = useState(false);
   function handleLoad() {
     setIsActive((current) => !current);
   }
+
   return (
     <>
       <Layout>
-        <div className="text">
-          <div className={isActive ? "" : "box-img-2"} onLoad={handleLoad}>
+        <div className="ja-box">
+          <div className={isActive ? "box-img-2" : ""} onLoad={handleLoad}>
             <div className="animation2">
               <div className="box-img">
-                <Image src="/ja2.jpg" alt="Koto" width={200} height={200} />
+                <picture>
+                  <source srcSet="/ja2.jpg" type="image/jpg" />
+                  <img src="/ja2.jpg" alt="Koto" />
+                </picture>
               </div>
             </div>
           </div>
-          <div className={isActive ? "text2" : ""} onLoad={handleLoad}>
-            <p>I don&apos;t really know how you got here... but here goes</p>
+          <div className="ja-box-text">
+            <h2>Kacper Skowroński</h2>
+            <p>{name}</p>
             <p>
-              My first name&apos;s Casper but with a K and a C, middle
-              name&apos;s Maria, yes it can be a man&apos;s name too, my
-              surname&apos;s Skowroński
-              <br />
-              <br /> An 18 year old IT Student from Poland with the life motto
-              “If I don&apos;t have to do it, I won&apos;t. If I have to do it,
+              An 18 year old IT Student from Poland with the life motto “If I
+              don&apos;t have to do it, I won&apos;t. If I have to do it,
               I&apos;ll make it quick.”, who for some reason made this site
               without having to
             </p>
           </div>
         </div>
-        <div className={isActive ? "links_an" : ""} onLoad={handleLoad}>
+        <div className={isActive ? "" : "links_an"} onLoad={handleLoad}>
           <div className="links">
             <a href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/">
               <picture>
@@ -62,8 +73,31 @@ export default function Home() {
         </div>
       </Layout>
       <style jsx>{`
+        .ja-box-text p:nth-child(2) {
+          opacity: 0.5;
+          font-style: italic;
+          margin: 5px 0px 5px 0px;
+        }
+        .ja-box-text {
+          margin-left: 20px;
+        }
+        .ja-box-text p {
+          padding: 0px !important;
+        }
+        .box-img img {
+          width: 200px;
+          height: 200px;
+          filter: invert(0%);
+          border-radius: 100%;
+        }
+        .text3 {
+          display: flex;
+          margin: 10px;
+        }
         .text2 {
           animation: opacity 5s normal;
+          display: flex;
+          margin: 10px;
         }
         img {
           width: 50px;
@@ -85,24 +119,16 @@ export default function Home() {
         .box-img-2 * {
           animation: none;
         }
+        .ja-box {
+          display: flex;
+        }
+
         .box-img {
-          border-radius: 100%;
-          overflow: hidden;
           animation: spin 3s normal;
           display: flex;
         }
         .animation2 {
           animation: slide 3s normal;
-        }
-        .text {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 5px;
-          flex-direction: column;
-        }
-        .text p {
-          padding: 0 20px;
         }
 
         .links a {
