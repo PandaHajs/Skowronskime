@@ -2,6 +2,10 @@ import Layout from "../src/components/Layout";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isActive, setIsActive] = useState(false);
+  function handleLoad() {
+    setIsActive((current) => !current);
+  }
   const names = [
     "IT Student",
     "Kac Biznesu",
@@ -12,11 +16,6 @@ export default function Home() {
   useEffect(() => {
     setName(names[Math.floor(Math.random() * names.length)]);
   }, []);
-
-  const [isActive, setIsActive] = useState(false);
-  function handleLoad() {
-    setIsActive((current) => !current);
-  }
 
   return (
     <>
