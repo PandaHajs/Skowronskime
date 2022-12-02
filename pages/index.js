@@ -89,15 +89,6 @@ export default function Home() {
           filter: invert(0%);
           border-radius: 100%;
         }
-        .text3 {
-          display: flex;
-          margin: 10px;
-        }
-        .text2 {
-          animation: opacity 5s normal;
-          display: flex;
-          margin: 10px;
-        }
         img {
           width: 50px;
           height: 50px;
@@ -120,8 +111,8 @@ export default function Home() {
         }
         .ja-box {
           display: flex;
+          height: 130px;
         }
-
         .box-img {
           animation: spin 3s normal;
           display: flex;
@@ -129,7 +120,6 @@ export default function Home() {
         .animation2 {
           animation: slide 3s normal;
         }
-
         .links a {
           height: 46px;
           width: 46px;
@@ -137,19 +127,21 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           margin: 5px;
-
           transition: 0.5s;
         }
-         {
-          filter: brightness(0) invert(1);
-        }
-
         .links {
           display: flex;
           justify-content: right;
           align-items: center;
           margin: 5px;
           width: 100%;
+        }
+        @media (max-width: 768px) {
+          .ja-box {
+            display: flex;
+            flex-direction: column;
+            height: 370px;
+          }
         }
         @keyframes spin {
           0% {
@@ -167,14 +159,6 @@ export default function Home() {
           }
           100% {
             transform: translateX(0px);
-          }
-        }
-        @keyframes opacity {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
           }
         }
         @keyframes opacity2 {

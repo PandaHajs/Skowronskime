@@ -13,10 +13,10 @@ export default function Layout({ children }) {
       <header>
         <nav>
           <Link href="/">
-            <a>Main</a>
+            <p>Main</p>
           </Link>
           <Link href="/about">
-            <a>About</a>
+            <p>About</p>
           </Link>
         </nav>
       </header>
@@ -36,12 +36,12 @@ export default function Layout({ children }) {
           justify-content: left;
           margin-left: 5vw;
         }
-        a {
+        p {
           padding: 5px;
           text-decoration: none;
           color: white;
         }
-        a:hover {
+        p:hover {
           animation: rainbow 10s ease-in-out;
         }
         header {
