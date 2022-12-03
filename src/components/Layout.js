@@ -1,8 +1,16 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Layout({ children }) {
+  const [isDrop, setIsDrop] = useState(false);
+  function drop() {
+    setIsDrop((current) => !current);
+  }
+  function hide() {
+    setIsDrop(false);
+  }
   return (
     <div className="container">
       <Head>
@@ -11,7 +19,7 @@ export default function Layout({ children }) {
       </Head>
 
       <header>
-        <nav>
+        <nav onClick={hide}>
           <Link href="/">
             <p>Main</p>
           </Link>
@@ -19,36 +27,109 @@ export default function Layout({ children }) {
             <p>About</p>
           </Link>
         </nav>
+        <button onClick={drop}>
+          <picture>
+            <source srcSet="/settings.svg" type="image/svg" />
+            <img src="/settings.svg" alt="Settings" />
+          </picture>
+        </button>
       </header>
+      <ul className={isDrop ? "list" : "list_hid"}>
+        <button>
+          <picture>
+            <source srcSet="/dark.svg" type="image/svg" />
+            <img src="/dark.svg" alt="Code" />
+          </picture>
+          <p>Toggle Mode</p>
+        </button>
+        <button>
+          <picture>
+            <source srcSet="/code.svg" type="image/svg" />
+            <img src="/code.svg" alt="Code" />
+          </picture>
+          <Link href="https://github.com/PandaHajs/Skowronskime">
+            <p>Source Code</p>
+          </Link>
+        </button>
+      </ul>
 
-      <main>{children}</main>
+      <main onClick={hide}>{children}</main>
 
-      <footer>
+      <footer onClick={hide}>
         <p>copyright © 2022 Kacper Skowronski</p>
       </footer>
       <style jsx>{`
+        .list {
+          position: absolute;
+          right: 15px;
+          top: 6vh;
+          transition: 0.5s;
+          display: flex;
+          flex-direction: column;
+        }
+        .list button {
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: black;
+          width: 200px;
+          height: 50px;
+        }
+        .list button:nth-of-type(1) {
+          border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+        }
+        .list_hid {
+          display: none;
+        }
+        .list img {
+          width: 20px;
+          filter: invert(1);
+          margin-right: 10px;
+        }
         * {
           color: white;
+        }
+        header button {
+          margin-right: 50px;
+          margin-top: 5px;
+          height: 35px;
+          width: 40px;
+          background-color: transparent;
+          border: none;
+          filter: invert(100%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        header img {
+          height: 33px;
+          width: 33px;
+        }
+        header button:active {
+          background-color: white;
+          border: 1px solid black;
         }
         nav {
           display: flex;
           align-items: center;
           justify-content: left;
           margin-left: 5vw;
+          width: 100%;
         }
         p {
           padding: 5px;
           text-decoration: none;
           color: white;
         }
-        p:hover {
+        header p:hover {
           animation: rainbow 10s ease-in-out;
         }
         header {
           display: flex;
           align-items: center;
-          justify-content: left;
-          background-color: #26262a;
+          justify-content: space-between;
+          background-color: var(--main);
           height: 5vh;
           width: 100%;
         }
@@ -56,7 +137,7 @@ export default function Layout({ children }) {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: #26262a;
+          background-color: var(--main);
           height: 5vh;
           width: 100%;
         }
@@ -71,7 +152,7 @@ export default function Layout({ children }) {
           padding-right: 30vw;
           padding-top: 5vh;
           height: 90vh;
-          background-color: #26262a;
+          background-color: var(--main);
         }
         .container {
           display: flex;

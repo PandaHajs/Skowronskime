@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import "../styles/global.css";
 import { Analytics } from "@vercel/analytics/react";
+import "../styles/variables.css";
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -40,34 +40,34 @@ export default function Home() {
               I&apos;ll make it quick.”, who for some reason made this site
               without having to
             </p>
-          </div>
-        </div>
-        <div className={isActive ? "" : "links_an"} onLoad={handleLoad}>
-          <div className="links">
-            <a href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/">
-              <picture>
-                <source srcSet="/linkedin.svg" type="image/svg" />
-                <img src="/linkedin.svg" alt="Linked" />
-              </picture>
-            </a>
-            <a href="https://github.com/PandaHajs">
-              <picture>
-                <source srcSet="/github.svg" type="image/svg" />
-                <img src="/github.svg" alt="Github" />
-              </picture>
-            </a>
-            <a href="https://steamcommunity.com/id/Brothersmoment">
-              <picture>
-                <source srcSet="/steam.svg" type="image/svg" />
-                <img src="/steam.svg" alt="Steam" />
-              </picture>
-            </a>
-            <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo?si=12fdb2fb1b954d54">
-              <picture>
-                <source srcSet="/spotify.svg" type="image/svg" />
-                <img src="/spotify.svg" alt="Spotify" />
-              </picture>
-            </a>
+            <div className={isActive ? "" : "links_an"} onLoad={handleLoad}>
+              <div className="links">
+                <a href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/">
+                  <picture>
+                    <source srcSet="/linkedin.svg" type="image/svg" />
+                    <img src="/linkedin.svg" alt="Linked" />
+                  </picture>
+                </a>
+                <a href="https://github.com/PandaHajs">
+                  <picture>
+                    <source srcSet="/github.svg" type="image/svg" />
+                    <img src="/github.svg" alt="Github" />
+                  </picture>
+                </a>
+                <a href="https://steamcommunity.com/id/Brothersmoment">
+                  <picture>
+                    <source srcSet="/steam.svg" type="image/svg" />
+                    <img src="/steam.svg" alt="Steam" />
+                  </picture>
+                </a>
+                <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo?si=12fdb2fb1b954d54">
+                  <picture>
+                    <source srcSet="/spotify.svg" type="image/svg" />
+                    <img src="/spotify.svg" alt="Spotify" />
+                  </picture>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </Layout>
@@ -79,6 +79,7 @@ export default function Home() {
         }
         .ja-box-text {
           margin-left: 20px;
+          height: 150px;
         }
         .ja-box-text p {
           padding: 0px !important;
@@ -111,7 +112,6 @@ export default function Home() {
         }
         .ja-box {
           display: flex;
-          height: 130px;
         }
         .box-img {
           animation: spin 3s normal;
