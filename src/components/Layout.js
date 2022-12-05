@@ -25,7 +25,7 @@ export default function Layout({ children }) {
     }
   }
   if (typeof window !== "undefined") {
-    localStorage.getItem("dark");
+    const dark = localStorage.getItem("dark");
   }
   function check() {
     if (typeof window !== "undefined") {
