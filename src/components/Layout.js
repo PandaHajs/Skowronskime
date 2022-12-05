@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
@@ -24,20 +24,18 @@ export default function Layout({ children }) {
       }
     }
   }
-  if (typeof window !== "undefined") {
+  useEffect(() => {
     const dark = localStorage.getItem("dark");
-  }
-  function check() {
     if (typeof window !== "undefined") {
-      if (dark == "true") {
+      if (dark == "false") {
         setIsDark(true);
       } else {
         setIsDark(false);
       }
     }
-  }
+  }, []);
   return (
-    <div className={isDark ? "container" : "lightmode"} onLoad={check}>
+    <div className={isDark ? "container" : "lightmode"}>
       <Head>
         <title>Skowronski</title>
         <link rel="icon" href="/Koto.png" />
