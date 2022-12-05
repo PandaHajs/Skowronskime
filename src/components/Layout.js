@@ -27,7 +27,7 @@ export default function Layout({ children }) {
   useEffect(() => {
     const dark = localStorage.getItem("dark");
     if (typeof window !== "undefined") {
-      if (dark == "false") {
+      if (dark == "true") {
         setIsDark(true);
       } else {
         setIsDark(false);
