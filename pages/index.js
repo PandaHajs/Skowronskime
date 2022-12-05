@@ -93,7 +93,7 @@ export default function Home() {
         img {
           width: 50px;
           height: 50px;
-          filter: invert(100%);
+          filter: var(--filter);
           border-radius: 100%;
           transition: 0.5s;
           margin: 5px;
@@ -102,7 +102,7 @@ export default function Home() {
           animation: opacity2 3s ease-in-out;
         }
         img:hover {
-          background-color: #00ffcc;
+          background-color: var(--img_hover);
         }
         .links a:nth-child(1) img {
           border-radius: 5% !important;

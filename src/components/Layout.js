@@ -11,8 +11,25 @@ export default function Layout({ children }) {
   function hide() {
     setIsDrop(false);
   }
+  const [isDark, setIsDark] = useState(true);
+  function light() {
+    setIsDark((current) => !current);
+    localStorage.setItem("dark", isDark);
+  }
+  if (typeof window !== "undefined") {
+    localStorage.getItem("dark");
+  }
+  function check() {
+    if (typeof window !== "undefined") {
+      if (dark == "true") {
+        setIsDark(true);
+      } else {
+        setIsDark(false);
+      }
+    }
+  }
   return (
-    <div className="container">
+    <div className={isDark ? "container" : "lightmode"} onLoad={check}>
       <Head>
         <title>Skowronski</title>
         <link rel="icon" href="/Koto.png" />
@@ -35,10 +52,14 @@ export default function Layout({ children }) {
         </button>
       </header>
       <ul className={isDrop ? "list" : "list_hid"}>
-        <button>
+        <button onClick={light}>
           <picture>
             <source srcSet="/dark.svg" type="image/svg" />
-            <img src="/dark.svg" alt="Code" />
+            <img src="/dark.svg" alt="dark" />
+          </picture>
+          <picture>
+            <source srcSet="/light.svg" type="image/svg" />
+            <img src="/light.svg" alt="light" />
           </picture>
           <p>Toggle Mode</p>
         </button>
@@ -72,7 +93,7 @@ export default function Layout({ children }) {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: black;
+          background-color: var(--button);
           width: 200px;
           height: 50px;
         }
@@ -84,11 +105,12 @@ export default function Layout({ children }) {
         }
         .list img {
           width: 20px;
-          filter: invert(1);
+          filter: var(--filter);
           margin-right: 10px;
         }
         * {
-          color: white;
+          color: var(--text);
+          transition: 0.5s;
         }
         header button {
           margin-right: 50px;
@@ -97,7 +119,7 @@ export default function Layout({ children }) {
           width: 40px;
           background-color: transparent;
           border: none;
-          filter: invert(100%);
+          filter: var(--filter);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -120,7 +142,7 @@ export default function Layout({ children }) {
         p {
           padding: 5px;
           text-decoration: none;
-          color: white;
+          color: var(--text);
         }
         header p:hover {
           animation: rainbow 10s ease-in-out;
@@ -129,17 +151,17 @@ export default function Layout({ children }) {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          background-color: var(--main);
           height: 5vh;
           width: 100%;
+          background-color: var(--main);
         }
         footer {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: var(--main);
           height: 5vh;
           width: 100%;
+          background-color: var(--main);
         }
         footer p {
           padding: 5px;
@@ -151,8 +173,8 @@ export default function Layout({ children }) {
           padding-left: 30vw;
           padding-right: 30vw;
           padding-top: 5vh;
-          height: 90vh;
           background-color: var(--main);
+          height: 90vh;
         }
         .container {
           display: flex;
