@@ -13,8 +13,10 @@ export default function Layout({ children }) {
   }
   const [isDark, setIsDark] = useState(true);
   function light() {
-    setIsDark((current) => !current);
-    localStorage.setItem("dark", isDark);
+    setIsDark(false);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("dark", setIsDark);
+    }
   }
   if (typeof window !== "undefined") {
     localStorage.getItem("dark");
