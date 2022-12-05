@@ -13,9 +13,15 @@ export default function Layout({ children }) {
   }
   const [isDark, setIsDark] = useState(true);
   function light() {
-    setIsDark(false);
+    setIsDark((current) => !current);
+    if(isDark ==  true){
     if (typeof window !== "undefined") {
-      localStorage.setItem("dark", setIsDark);
+      localStorage.setItem("dark", "true");
+    }
+
+  }else{
+    if (typeof window !== "undefined") {
+      localStorage.setItem("dark", "false");
     }
   }
   if (typeof window !== "undefined") {
