@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Layout({ children }) {
   const [isDrop, setIsDrop] = useState(false);
@@ -12,28 +11,26 @@ export default function Layout({ children }) {
     setIsDrop(false);
   }
   const [isDark, setIsDark] = useState(true);
-  function light() {
-    setIsDark((current) => !current);
-    if (isDark == true) {
-      if (typeof window !== "undefined") {
-        localStorage.setItem("dark", "true");
-      }
-    } else {
-      if (typeof window !== "undefined") {
-        localStorage.setItem("dark", "false");
-      }
-    }
-  }
   useEffect(() => {
     const dark = localStorage.getItem("dark");
-    if (typeof window !== "undefined") {
+    if (typeof window != "undefined") {
       if (dark == "true") {
         setIsDark(true);
-      } else {
+      } else if (dark == "false") {
         setIsDark(false);
       }
     }
   }, []);
+  function light() {
+    setIsDark((current) => !current);
+    if (typeof window != "undefined") {
+      if (isDark == true) {
+        localStorage.setItem("dark", "false");
+      } else if (isDark == false) {
+        localStorage.setItem("dark", "true");
+      }
+    }
+  }
   return (
     <div className={isDark ? "container" : "lightmode"}>
       <Head>
