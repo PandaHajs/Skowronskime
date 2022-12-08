@@ -55,11 +55,11 @@ export default function Layout({ children }) {
       </header>
       <ul className={isDrop ? "list" : "list_hid"}>
         <button onClick={light}>
-          <picture>
+          <picture className={isDark ? "dark" : ""}>
             <source srcSet="/dark.svg" type="image/svg" />
             <img src="/dark.svg" alt="dark" />
           </picture>
-          <picture>
+          <picture className={isDark ? "" : "light"}>
             <source srcSet="/light.svg" type="image/svg" />
             <img src="/light.svg" alt="light" />
           </picture>
@@ -82,6 +82,14 @@ export default function Layout({ children }) {
         <p>copyright © 2022 Kacper Skowronski</p>
       </footer>
       <style jsx>{`
+        .dark {
+          display: none;
+          transition: 0.5s;
+        }
+        .light {
+          display: none;
+          transition: 0.5s;
+        }
         .list {
           position: absolute;
           right: 15px;
