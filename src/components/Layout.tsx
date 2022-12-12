@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-export default function Layout({ children }) {
+type LayoutProps = {
+  children: React.ReactNode;
+};
+const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
   const [isDrop, setIsDrop] = useState(false);
   function drop() {
     setIsDrop((current) => !current);
@@ -9,7 +12,7 @@ export default function Layout({ children }) {
   function hide() {
     setIsDrop(false);
   }
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false || true);
   useEffect(() => {
     const dark = localStorage.getItem("dark");
     if (typeof window != "undefined") {
@@ -231,4 +234,6 @@ export default function Layout({ children }) {
       `}</style>
     </div>
   );
-}
+};
+
+export default Layout;

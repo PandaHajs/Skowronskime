@@ -1,7 +1,8 @@
 import Layout from "../src/components/Layout";
-import { useEffect, useState } from "react";
+import { useEffect, useState, FC } from "react";
+type HomeComponent = FC & { layout: typeof Layout };
 
-export default function Home() {
+const Home: HomeComponent = () => {
   const [isActive, setIsActive] = useState(false);
   function handleLoad() {
     setIsActive((current) => !current);
@@ -19,58 +20,56 @@ export default function Home() {
 
   return (
     <>
-      <Layout>
-        <div className="ja-box">
-          <div className={isActive ? "box-img-2" : ""} onLoad={handleLoad}>
-            <div className="animation2">
-              <div className="box-img">
-                <picture>
-                  <source srcSet="/ja2.jpg" type="image/jpg" />
-                  <img src="/ja2.jpg" alt="Koto" />
-                </picture>
-              </div>
-            </div>
-          </div>
-          <div className="ja-box-text">
-            <h2>Kacper Skowroński</h2>
-            <p>{name}</p>
-            <p>
-              An 18 year old IT Student from Poland with the life motto “If I
-              don&apos;t have to do it, I won&apos;t. If I have to do it,
-              I&apos;ll make it quick.”, who for some reason made this site
-              without having to
-            </p>
-            <div className={isActive ? "" : "links_an"} onLoad={handleLoad}>
-              <div className="links">
-                <a href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/">
-                  <picture>
-                    <source srcSet="/linkedin.svg" type="image/svg" />
-                    <img src="/linkedin.svg" alt="Linked" />
-                  </picture>
-                </a>
-                <a href="https://github.com/PandaHajs">
-                  <picture>
-                    <source srcSet="/github.svg" type="image/svg" />
-                    <img src="/github.svg" alt="Github" />
-                  </picture>
-                </a>
-                <a href="https://steamcommunity.com/id/Brothersmoment">
-                  <picture>
-                    <source srcSet="/steam.svg" type="image/svg" />
-                    <img src="/steam.svg" alt="Steam" />
-                  </picture>
-                </a>
-                <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo?si=12fdb2fb1b954d54">
-                  <picture>
-                    <source srcSet="/spotify.svg" type="image/svg" />
-                    <img src="/spotify.svg" alt="Spotify" />
-                  </picture>
-                </a>
-              </div>
+      <div className="ja-box">
+        <div className={isActive ? "box-img-2" : ""} onLoad={handleLoad}>
+          <div className="animation2">
+            <div className="box-img">
+              <picture>
+                <source srcSet="/ja2.jpg" type="image/jpg" />
+                <img src="/ja2.jpg" alt="Koto" />
+              </picture>
             </div>
           </div>
         </div>
-      </Layout>
+        <div className="ja-box-text">
+          <h2>Kacper Skowroński</h2>
+          <p>{name}</p>
+          <p>
+            An 18 year old IT Student from Poland with the life motto “If I
+            don&apos;t have to do it, I won&apos;t. If I have to do it,
+            I&apos;ll make it quick.”, who for some reason made this site
+            without having to
+          </p>
+          <div className={isActive ? "" : "links_an"} onLoad={handleLoad}>
+            <div className="links">
+              <a href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/">
+                <picture>
+                  <source srcSet="/linkedin.svg" type="image/svg" />
+                  <img src="/linkedin.svg" alt="Linked" />
+                </picture>
+              </a>
+              <a href="https://github.com/PandaHajs">
+                <picture>
+                  <source srcSet="/github.svg" type="image/svg" />
+                  <img src="/github.svg" alt="Github" />
+                </picture>
+              </a>
+              <a href="https://steamcommunity.com/id/Brothersmoment">
+                <picture>
+                  <source srcSet="/steam.svg" type="image/svg" />
+                  <img src="/steam.svg" alt="Steam" />
+                </picture>
+              </a>
+              <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo?si=12fdb2fb1b954d54">
+                <picture>
+                  <source srcSet="/spotify.svg" type="image/svg" />
+                  <img src="/spotify.svg" alt="Spotify" />
+                </picture>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <style jsx>{`
         .ja-box-text p:nth-child(2) {
           opacity: 0.5;
@@ -179,4 +178,7 @@ export default function Home() {
       `}</style>
     </>
   );
-}
+};
+
+Home.layout = Layout;
+export default Home;
