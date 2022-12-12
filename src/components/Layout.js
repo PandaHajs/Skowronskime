@@ -39,10 +39,10 @@ export default function Layout({ children }) {
 
       <header>
         <nav onClick={hide}>
-          <Link href="/">
+          <Link href="/" style={{ textDecoration: "none" }}>
             <p>Main</p>
           </Link>
-          <Link href="/about">
+          <Link href="/about" style={{ textDecoration: "none" }}>
             <p>About</p>
           </Link>
         </nav>
@@ -70,7 +70,10 @@ export default function Layout({ children }) {
             <source srcSet="/code.svg" type="image/svg" />
             <img src="/code.svg" alt="Code" />
           </picture>
-          <Link href="https://github.com/PandaHajs/Skowronskime">
+          <Link
+            href="https://github.com/PandaHajs/Skowronskime"
+            style={{ textDecoration: "none" }}
+          >
             <p>Source Code</p>
           </Link>
         </button>
@@ -106,9 +109,10 @@ export default function Layout({ children }) {
           background-color: var(--button);
           width: 200px;
           height: 50px;
+          border: none;
         }
         .list button:nth-of-type(1) {
-          border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+          border-bottom: 1px dashed var(--border);
         }
         .list_hid {
           display: none;

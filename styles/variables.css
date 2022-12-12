@@ -4,6 +4,7 @@
   --button: black;
   --filter: invert(100%);
   --img_hover: #00ffcc;
+  --border: rgba(255, 255, 255, 0.5);
 }
 .lightmode {
   --text: black;
@@ -14,4 +15,5 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  --border: rgba(0, 0, 0, 0.5);
 }
