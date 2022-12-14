@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useTheme } from "next-themes";
@@ -27,6 +27,14 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
       setActive("light");
     }
   }
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="container">
@@ -53,11 +61,11 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
       </header>
       <ul className={isDrop ? "list" : "list_hid"}>
         <button onClick={light}>
-          <picture className={active == "dark" ? "dark " : ""}>
+          <picture className={active == "dark" ? "hide" : ""}>
             <source srcSet="/dark.svg" type="image/svg" />
             <img src="/dark.svg" alt="dark" />
           </picture>
-          <picture className={active == "light" ? "light" : ""}>
+          <picture className={active == "dark" ? "" : "hide"}>
             <source srcSet="/light.svg" type="image/svg" />
             <img src="/light.svg" alt="light" />
           </picture>
@@ -83,13 +91,8 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
         <p>copyright © 2022 Kacper Skowronski</p>
       </footer>
       <style jsx>{`
-        .dark {
+        .hide {
           display: none;
-          transition: 0.5s;
-        }
-        .light {
-          display: none;
-          transition: 0.5s;
         }
         .list {
           position: absolute;
