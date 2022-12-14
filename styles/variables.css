@@ -6,7 +6,7 @@
   --img_hover: #00ffcc;
   --border: rgba(255, 255, 255, 0.5);
 }
-.lightmode {
+[data-theme="light"] {
   --text: black;
   --main: white;
   --button: gray;

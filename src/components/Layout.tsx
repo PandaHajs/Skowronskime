@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 type LayoutProps = {
   children: React.ReactNode;
 };
+
 const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
   const [isDrop, setIsDrop] = useState(false);
   function drop() {
@@ -12,29 +14,22 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
   function hide() {
     setIsDrop(false);
   }
-  const [isDark, setIsDark] = useState(false || true);
-  useEffect(() => {
-    const dark = localStorage.getItem("dark");
-    if (typeof window != "undefined") {
-      if (dark == "true") {
-        setIsDark(true);
-      } else if (dark == "false") {
-        setIsDark(false);
-      }
-    }
-  }, []);
+  const { Theme, setTheme } = useTheme();
+  const [active, setActive] = useState("");
+
   function light() {
-    setIsDark((current) => !current);
-    if (typeof window != "undefined") {
-      if (isDark == true) {
-        localStorage.setItem("dark", "false");
-      } else if (isDark == false) {
-        localStorage.setItem("dark", "true");
-      }
+    console.log(active);
+    if (active == "light") {
+      setTheme("dark");
+      setActive("dark");
+    } else {
+      setTheme("light");
+      setActive("light");
     }
   }
+
   return (
-    <div className={isDark ? "container" : "lightmode"}>
+    <div className="container">
       <Head>
         <title>Skowronski</title>
         <link rel="icon" href="/Koto.png" />
@@ -58,11 +53,11 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
       </header>
       <ul className={isDrop ? "list" : "list_hid"}>
         <button onClick={light}>
-          <picture className={isDark ? "dark" : ""}>
+          <picture className={active == "dark" ? "dark " : ""}>
             <source srcSet="/dark.svg" type="image/svg" />
             <img src="/dark.svg" alt="dark" />
           </picture>
-          <picture className={isDark ? "" : "light"}>
+          <picture className={active == "light" ? "light" : ""}>
             <source srcSet="/light.svg" type="image/svg" />
             <img src="/light.svg" alt="light" />
           </picture>

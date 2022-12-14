@@ -4,6 +4,7 @@ import "../styles/global.css";
 import { Analytics } from "@vercel/analytics/react";
 import "../styles/variables.css";
 import PageWithLayout from "../types/PageWithLayout";
+import { ThemeProvider } from "next-themes";
 
 type AppLayoutProps = {
   Component: PageWithLayout;
@@ -17,10 +18,12 @@ function MyApp({ Component, pageProps }: AppLayoutProps) {
       <Head>
         <meta name="theme-color" content="#3c1742" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-      <Analytics />
+      <ThemeProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+        <Analytics />
+      </ThemeProvider>
     </React.Fragment>
   );
 }
