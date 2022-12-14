@@ -14,7 +14,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
   function hide() {
     setIsDrop(false);
   }
-  const [mounted, setMounted] = useState(false);
+
   const { theme, setTheme } = useTheme();
 
   function light() {
@@ -23,13 +23,6 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
     } else {
       setTheme("light");
     }
-  }
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
   }
 
   return (
