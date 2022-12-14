@@ -14,20 +14,16 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
   function hide() {
     setIsDrop(false);
   }
-  const { Theme, setTheme } = useTheme();
-  const [active, setActive] = useState("");
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   function light() {
-    console.log(active);
-    if (active == "light") {
+    if (theme == "light") {
       setTheme("dark");
-      setActive("dark");
     } else {
       setTheme("light");
-      setActive("light");
     }
   }
-  const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -61,11 +57,11 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
       </header>
       <ul className={isDrop ? "list" : "list_hid"}>
         <button onClick={light}>
-          <picture className={active == "dark" ? "hide" : ""}>
+          <picture className={theme == "dark" ? "hide" : ""}>
             <source srcSet="/dark.svg" type="image/svg" />
             <img src="/dark.svg" alt="dark" />
           </picture>
-          <picture className={active == "dark" ? "" : "hide"}>
+          <picture className={theme == "dark" ? "" : "hide"}>
             <source srcSet="/light.svg" type="image/svg" />
             <img src="/light.svg" alt="light" />
           </picture>
