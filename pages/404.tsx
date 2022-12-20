@@ -5,7 +5,7 @@ type NoComponent = FC & { layout: typeof Layout };
 const NoPage: NoComponent = () => {
   return (
     <>
-      <h1>Error 404, No page found</h1>
+      <h1>Error 404, Page not found</h1>
 
       <style jsx>{``}</style>
     </>

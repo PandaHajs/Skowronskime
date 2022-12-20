@@ -30,7 +30,7 @@ const Home: HomeComponent = () => {
               </picture>
             </div>
           </div>
-        </div>
+        </div>  
         <div className="ja-box-text">
           <h2>Kacper Skowroński</h2>
           <p>{name}</p>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useTheme } from "next-themes";
@@ -87,7 +87,6 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           position: absolute;
           right: 15px;
           top: 6vh;
-          transition: 0.5s;
           display: flex;
           flex-direction: column;
         }
@@ -100,6 +99,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           width: 200px;
           height: 50px;
           border: none;
+          transition: 0.5s;
         }
         .list button:nth-of-type(1) {
           border-bottom: 1px dashed var(--border);
@@ -111,10 +111,6 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           width: 20px;
           filter: var(--filter);
           margin-right: 10px;
-        }
-        * {
-          color: var(--text);
-          transition: 0.5s;
         }
         header button {
           margin-right: 50px;
@@ -158,6 +154,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           height: 5vh;
           width: 100%;
           background-color: var(--main);
+          transition: 0.5s;
         }
         footer {
           display: flex;
@@ -166,6 +163,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           height: 5vh;
           width: 100%;
           background-color: var(--main);
+          transition: 0.5s;
         }
         footer p {
           padding: 5px;
@@ -179,6 +177,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           padding-top: 5vh;
           background-color: var(--main);
           height: 90vh;
+          transition: 0.5s;
         }
         .container {
           display: flex;
@@ -189,6 +188,12 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           main {
             padding-left: 3vw;
             padding-right: 3vw;
+          }
+          .list button {
+            width: 150px;
+          }
+          .list button p {
+            font-size: 15px;
           }
         }
         @keyframes rainbow {
