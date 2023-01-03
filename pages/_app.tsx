@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/global.css";
 import { Analytics } from "@vercel/analytics/react";
 import "../styles/variables.css";
-import PageWithLayout from "../types/PageWithLayout";
+import PageWithLayout from "../lib/PageWithLayout";
 import { ThemeProvider } from "next-themes";
 
 type AppLayoutProps = {

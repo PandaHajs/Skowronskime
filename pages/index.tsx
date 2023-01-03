@@ -1,5 +1,6 @@
-import Layout from "../src/components/Layout";
+import Layout from "../lib/Layout";
 import { useEffect, useState, FC } from "react";
+import { getAge, indefeniteArticle } from "../lib/age";
 type HomeComponent = FC & { layout: typeof Layout };
 
 const Home: HomeComponent = () => {
@@ -7,17 +8,18 @@ const Home: HomeComponent = () => {
   function handleLoad() {
     setIsActive((current) => !current);
   }
-  const names = [
-    "IT Student",
-    "Kac Biznesu",
-    "Some random guy",
-    "The perfect victim",
-  ];
+
   const [name, setName] = useState("");
   useEffect(() => {
+    const names = [
+      "IT Student",
+      "Kac Biznesu",
+      "Some random guy",
+      "The perfect victim",
+    ];
     setName(names[Math.floor(Math.random() * names.length)]);
   }, []);
-
+  const age = getAge();
   return (
     <>
       <div className="ja-box">
@@ -30,15 +32,15 @@ const Home: HomeComponent = () => {
               </picture>
             </div>
           </div>
-        </div>  
+        </div>
         <div className="ja-box-text">
           <h2>Kacper Skowroński</h2>
           <p>{name}</p>
           <p>
-            An 18 year old IT Student from Poland with the life motto “If I
-            don&apos;t have to do it, I won&apos;t. If I have to do it,
-            I&apos;ll make it quick.”, who for some reason made this site
-            without having to
+            {indefeniteArticle(age)} {age} year old IT Student from Poland with
+            the life motto “If I don&apos;t have to do it, I won&apos;t. If I
+            have to do it, I&apos;ll make it quick.”, who for some reason made
+            this site without having to
           </p>
           <div className={isActive ? "" : "links_an"} onLoad={handleLoad}>
             <div className="links">

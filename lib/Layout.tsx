@@ -14,6 +14,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
   function hide() {
     setIsDrop(false);
   }
+  const year = new Date().getFullYear();
 
   const { theme, setTheme } = useTheme();
 
@@ -77,7 +78,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
       <main onClick={hide}>{children}</main>
 
       <footer onClick={hide}>
-        <p>copyright © 2022 Kacper Skowronski</p>
+        <p>copyright © {year} Kacper Skowronski</p>
       </footer>
       <style jsx>{`
         .hide {
@@ -129,8 +130,8 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           width: 33px;
         }
         header button:active {
-          background-color: white;
-          border: 1px solid black;
+          background-color: gray;
+          border-radius: 50%;
         }
         nav {
           display: flex;

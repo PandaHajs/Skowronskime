@@ -1,4 +1,4 @@
-import Layout from "../src/components/Layout";
+import Layout from "../lib/Layout";
 import { FC } from "react";
 type InternalComponent = FC & { layout: typeof Layout };
 
