@@ -5,16 +5,32 @@ type HomeComponent = FC & { layout: typeof Layout };
 import { getName } from "../lib/names";
 
 const Home: HomeComponent = () => {
+  const [isTransition, setIsTransition] = useState(false);
   const age = getAge();
   const [name, setName] = useState("");
   useEffect(() => {
     setName(getName);
+    setIsTransition(true);
   }, []);
+  const rollName = () => {
+    setTimeout(() => {
+      setIsTransition(false);
+    }, 400);
+    setTimeout(() => {
+      setName(getName);
+    }, 100);
+    setTimeout(() => {
+      setIsTransition(true);
+    }, 100);
+  };
+
   return (
     <>
       <div className="part1">
         <h1>Hello there! I&apos;m Kacper Skowronski</h1>
-        <p>{name}</p>
+        <p onClick={rollName} className={isTransition ? "animate" : "hide"}>
+          {name}
+        </p>
         <p>
           {indefeniteArticle(age)} {age} years old IT Student from Poland, with
           the life motto &quot;If I don&apos;t have to do it, I won&apos;t. If I
@@ -27,8 +43,12 @@ const Home: HomeComponent = () => {
         p:first-of-type {
           font-style: italic;
           opacity: 0.5;
-          transition: 0.5s;
-          animation: fadein 1s;
+        }
+        .hide {
+          display: hidden;
+        }
+        .animate {
+          animation: fadein 0.5s;
         }
         .part1 {
           height: 50vh;
