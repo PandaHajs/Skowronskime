@@ -93,6 +93,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           top: 6vh;
           display: flex;
           flex-direction: column;
+          z-index: 2;
         }
         .list button {
           padding: 10px;
@@ -191,10 +192,6 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           height: 100vh;
         }
         @media (max-width: 768px) {
-          main {
-            padding-left: 3vw;
-            padding-right: 3vw;
-          }
           .list button {
             width: 150px;
           }
