@@ -4,178 +4,47 @@ import { getAge, indefeniteArticle } from "../lib/age";
 type HomeComponent = FC & { layout: typeof Layout };
 
 const Home: HomeComponent = () => {
-  const [isActive, setIsActive] = useState(false);
-  function handleLoad() {
-    setIsActive((current) => !current);
-  }
-
+  const age = getAge();
   const [name, setName] = useState("");
   useEffect(() => {
     const names = [
-      "IT Student",
+      "An IT Student",
       "Kac Biznesu",
-      "Some random guy",
+      "Just some random guy",
       "The perfect victim",
+      "A beloved boyfriend",
+      "A guy who has no idea what he's doing",
     ];
     setName(names[Math.floor(Math.random() * names.length)]);
   }, []);
-  const age = getAge();
   return (
     <>
-      <div className="ja-box">
-        <div className={isActive ? "box-img-2" : ""} onLoad={handleLoad}>
-          <div className="animation2">
-            <div className="box-img">
-              <picture>
-                <source srcSet="/ja2.jpg" type="image/jpg" />
-                <img src="/ja2.jpg" alt="Koto" />
-              </picture>
-            </div>
-          </div>
-        </div>
-        <div className="ja-box-text">
-          <h2>Kacper Skowroński</h2>
-          <p>{name}</p>
-          <p>
-            {indefeniteArticle(age)} {age} year old IT Student from Poland with
-            the life motto “If I don&apos;t have to do it, I won&apos;t. If I
-            have to do it, I&apos;ll make it quick.”, who for some reason made
-            this site without having to
-          </p>
-          <div className={isActive ? "" : "links_an"} onLoad={handleLoad}>
-            <div className="links">
-              <a href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/">
-                <picture>
-                  <source srcSet="/linkedin.svg" type="image/svg" />
-                  <img src="/linkedin.svg" alt="Linked" />
-                </picture>
-              </a>
-              <a href="https://github.com/PandaHajs">
-                <picture>
-                  <source srcSet="/github.svg" type="image/svg" />
-                  <img src="/github.svg" alt="Github" />
-                </picture>
-              </a>
-              <a href="https://steamcommunity.com/id/Brothersmoment">
-                <picture>
-                  <source srcSet="/steam.svg" type="image/svg" />
-                  <img src="/steam.svg" alt="Steam" />
-                </picture>
-              </a>
-              <a href="https://open.spotify.com/user/bw0ll1dlqune2qo1lh0xjhqxo?si=12fdb2fb1b954d54">
-                <picture>
-                  <source srcSet="/spotify.svg" type="image/svg" />
-                  <img src="/spotify.svg" alt="Spotify" />
-                </picture>
-              </a>
-            </div>
-          </div>
-        </div>
+      <div className="part1">
+        <h1>Hello there! I&apos;m Kacper Skowronski</h1>
+        <h1></h1>
+        <p>{name}</p>
+        <p>
+          {indefeniteArticle(age)} {age} years old IT Student from Poland, with
+          the life motto &quot;If I don&apos;t have to do it, I won&apos;t. If I
+          have to do it, I&apos;ll make it quick.&quot; who for some reason made
+          this site without having to.
+        </p>
       </div>
+      <div className="part2"></div>
       <style jsx>{`
-        .ja-box-text p:nth-child(2) {
-          opacity: 0.5;
+        p:first-of-type {
           font-style: italic;
-          margin: 5px 0px 5px 0px;
+          opacity: 0.5;
         }
-        .ja-box-text {
-          margin-left: 20px;
-          height: 150px;
+        .part1 {
+          height: 50vh;
+          padding: 0 30vw;
+          padding-top: 15vh;
         }
-        .ja-box-text p {
-          padding: 0px !important;
-        }
-        .box-img img {
-          width: 200px;
-          height: 200px;
-          filter: invert(0%);
-          border-radius: 100%;
-        }
-        img {
-          width: 50px;
-          height: 50px;
-          filter: var(--filter);
-          border-radius: 100%;
-          transition: 0.5s;
-          margin: 5px;
-        }
-        .links_an {
-          animation: opacity2 3s ease-in-out;
-        }
-        img:hover {
-          background-color: var(--img_hover);
-        }
-        .links a:nth-child(1) img {
-          border-radius: 5% !important;
-        }
-        .box-img-2 * {
-          animation: none;
-        }
-        .ja-box {
-          display: flex;
-        }
-        .box-img {
-          animation: spin 3s normal;
-          display: flex;
-        }
-        .animation2 {
-          animation: slide 3s normal;
-        }
-        .links a {
-          height: 46px;
-          width: 46px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 5px;
-          transition: 0.5s;
-        }
-        .links {
-          display: flex;
-          justify-content: right;
-          align-items: center;
-          margin: 5px;
-          width: 100%;
-        }
-        @media (max-width: 768px) {
-          .ja-box {
-            display: flex;
-            flex-direction: column;
-            height: 370px;
-          }
-        }
-        @keyframes spin {
-          0% {
-            transform: rotate(0deg);
-            opacity: 0;
-          }
-          100% {
-            transform: rotate(359deg);
-            opacity: 1;
-          }
-        }
-        @keyframes slide {
-          0% {
-            transform: translateX(-300px);
-          }
-          100% {
-            transform: translateX(0px);
-          }
-        }
-        @keyframes opacity2 {
-          0% {
-            opacity: 0;
-            transform: translateY(100px);
-          }
-          40% {
-            transform: translateY(100px);
-          }
-          50% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
+        .part2 {
+          background-color: var(--main2);
+          height: 50vh;
+          clip-path: polygon(0% 14%, 100% 0px, 100% 100%, 0px 100%);
         }
       `}</style>
     </>

@@ -5,6 +5,7 @@
   --filter: invert(100%);
   --img_hover: #00ffcc;
   --border: rgba(255, 255, 255, 0.5);
+  --main2: #28282c;
 }
 [data-theme="light"] {
   --text: black;
@@ -13,4 +14,5 @@
   --img_hover: #ff0033;
   --filter: invert(0);
   --border: rgba(0, 0, 0, 0.5);
+  --main2: #f0f0f0;
 }

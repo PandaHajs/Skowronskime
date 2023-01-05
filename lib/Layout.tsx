@@ -41,6 +41,9 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           <Link href="/about" style={{ textDecoration: "none" }}>
             <p>About</p>
           </Link>
+          <Link href="/contact" style={{ textDecoration: "none" }}>
+            <p>Contact</p>
+          </Link>
         </nav>
         <button onClick={drop}>
           <picture>
@@ -52,12 +55,12 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
       <ul className={isDrop ? "list" : "list_hid"}>
         <button onClick={light}>
           <picture className={theme == "dark" ? "hide" : ""}>
-            <source srcSet="/dark.svg" type="image/svg" />
-            <img src="/dark.svg" alt="dark" />
+            <source srcSet="/moon.svg" type="image/svg" />
+            <img src="/moon.svg" alt="moon" />
           </picture>
           <picture className={theme == "dark" ? "" : "hide"}>
-            <source srcSet="/light.svg" type="image/svg" />
-            <img src="/light.svg" alt="light" />
+            <source srcSet="/sun.svg" type="image/svg" />
+            <img src="/sun.svg" alt="sun" />
           </picture>
           <p>Toggle Mode</p>
         </button>
@@ -156,14 +159,20 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
           width: 100%;
           background-color: var(--main);
           transition: 0.5s;
+          box-shadow: rgb(0 0 0 / 20%) 0px 0px 20px 0px;
+          position: relative;
+          z-index: 1;
         }
         footer {
+          box-shadow: rgb(0 0 0 / 20%) 0px 0px 20px 0px;
+          position: relative;
+          z-index: 10;
           display: flex;
           align-items: center;
           justify-content: center;
           height: 5vh;
           width: 100%;
-          background-color: var(--main);
+          background-color: var(--main2);
           transition: 0.5s;
         }
         footer p {
@@ -172,10 +181,6 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
         main {
           display: flex;
           flex-direction: column;
-          align-items: left;
-          padding-left: 30vw;
-          padding-right: 30vw;
-          padding-top: 5vh;
           background-color: var(--main);
           height: 90vh;
           transition: 0.5s;
