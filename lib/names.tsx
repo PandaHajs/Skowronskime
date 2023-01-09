@@ -7,6 +7,7 @@ const getName = () => {
     "A beloved boyfriend",
     "A guy who has no idea what he's doing",
     "All hands to battle stations!",
+    "General Kenobi",
   ];
   const name = names[Math.floor(Math.random() * names.length)];
   return name;

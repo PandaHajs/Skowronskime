@@ -11,6 +11,9 @@ const Home: HomeComponent = () => {
   useEffect(() => {
     setName(getName);
     setIsTransition(true);
+    setTimeout(() => {
+      setIsTransition(false);
+    }, 400);
   }, []);
   const rollName = () => {
     setTimeout(() => {
