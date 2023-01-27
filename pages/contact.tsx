@@ -10,25 +10,31 @@ const Contact: ContactComponent = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const regex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const submit = () => {
     if (name && email && message) {
-      const serviceId = "service_usyedjh";
-      const templateId = "template_ujbilsp";
-      const userId = "user_z-KQDXk4LiMowhFGz";
-      const templateParams = {
-        name,
-        email,
-        message,
-      };
-      emailjs
-        .send(serviceId, templateId, templateParams, userId)
-        .then((response) => console.log(response))
-        .then((error) => console.log(error));
-      setName("");
-      setEmail("");
-      setMessage("");
-      toast("Message sent!");
+      if (email.match(regex) != null) {
+        const serviceId = "service_usyedjh";
+        const templateId = "template_ujbilsp";
+        const publicKey = "z-KQDXk4LiMowhFGz";
+        const templateParams = {
+          name,
+          email,
+          message,
+        };
+        emailjs
+          .send(serviceId, templateId, templateParams, publicKey)
+          .then((response) => console.log(response))
+          .then((error) => console.log(error));
+        setName("");
+        setEmail("");
+        setMessage("");
+        toast("Message sent!");
+      } else {
+        toast("Please enter a valid e-mail!");
+      }
     } else {
       toast("Please fill in all areas!");
     }
