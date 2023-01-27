@@ -3,12 +3,13 @@ import { FC, useState } from "react";
 type ContactComponent = FC & { layout: typeof Layout };
 import styles from "../styles/contact.module.scss";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact: ContactComponent = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [emailSent, setEmailSent] = useState(false);
 
   const submit = () => {
     if (name && email && message) {
@@ -27,14 +28,15 @@ const Contact: ContactComponent = () => {
       setName("");
       setEmail("");
       setMessage("");
-      setEmailSent(true);
+      toast("Message sent!");
     } else {
-      alert("Please fill in all fields.");
+      toast("Please fill in all areas!");
     }
   };
 
   return (
     <>
+      <ToastContainer />
       <div className={styles.part1}>
         <div className={styles.forma}>
           <p style={{ fontSize: "1.2rem" }}>
@@ -64,31 +66,31 @@ const Contact: ContactComponent = () => {
             <br />
             or fill in the contact form below:
           </p>
-          <form>
-            <p style={{ fontSize: "1.2rem" }}>Your full name: </p>
-            <input
-              type="text"
-              name="name"
-              style={{ width: "30vw" }}
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <p style={{ fontSize: "1.2rem" }}>Your E-mail:</p>
-            <input
-              type="email"
-              style={{ width: "30vw" }}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <p style={{ fontSize: "1.2rem" }}>Message:</p>
-            <textarea
-              name="message"
-              onChange={(e) => setMessage(e.target.value)}
-              value={message}
-            />
-            <br />
-            <input type="submit" onClick={submit} style={{ width: "5vw" }} />
-          </form>
+          <p style={{ fontSize: "1.2rem" }}>Your full name: </p>
+          <input
+            type="text"
+            name="name"
+            style={{ width: "30vw" }}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <p style={{ fontSize: "1.2rem" }}>Your E-mail:</p>
+          <input
+            type="email"
+            style={{ width: "30vw" }}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <p style={{ fontSize: "1.2rem" }}>Message:</p>
+          <textarea
+            name="message"
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
+          />
+          <br />
+          <button onClick={submit} style={{ width: "60px" }}>
+            Send
+          </button>
         </div>
       </div>
       <div className={styles.part2}></div>
