@@ -1,0 +1,154 @@
+.hide {
+  display: none;
+}
+.list {
+  position: fixed;
+  right: 15px;
+  top: 6vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+}
+.headerp {
+  padding: 5px;
+  text-decoration: none;
+  color: var(--text);
+}
+.headerbutton:active {
+  background-color: gray;
+  border-radius: 50%;
+}
+.listbutton {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button);
+  width: 200px;
+  height: 50px;
+  border: none;
+  transition: 0.5s;
+}
+.listbuttonn {
+  border-bottom: 1px dashed var(--border);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button);
+  width: 200px;
+  height: 50px;
+  border: none;
+  transition: 0.5s;
+}
+.list_hid {
+  display: none;
+}
+.listimg {
+  width: 20px;
+  filter: var(--filter);
+  margin-right: 10px;
+}
+.headerbutton {
+  margin-right: 50px;
+  margin-top: 5px;
+  height: 35px;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  filter: var(--filter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerimg {
+  height: 33px;
+  width: 33px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 5vw;
+  width: 100%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5%;
+  width: 100%;
+  background-color: var(--main);
+  transition: 0.5s;
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 20px 0px;
+  position: relative;
+  z-index: 20;
+  position: fixed;
+}
+.footer {
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 20px 0px;
+  position: fixed;
+  top: 95%;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5%;
+  width: 100%;
+  background-color: var(--main2);
+  transition: 0.5s;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main);
+  transition: 0.5s;
+  position: relative;
+  top: 5vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+@media (max-width: 768px) {
+  .listbut {
+    width: 150px;
+  }
+  .listbuttp {
+    font-size: 15px;
+  }
+}
+.headerp:hover {
+  animation: rainbow 10s ease-in-out;
+}
+.footerp {
+  padding: 5px;
+}
+@keyframes rainbow {
+  0% {
+    transform: rotate(0deg);
+    color: red;
+  }
+  15% {
+    color: orange;
+  }
+  30% {
+    color: yellow;
+  }
+  45% {
+    color: green;
+  }
+  60% {
+    color: blue;
+  }
+  75% {
+    color: indigo;
+  }
+  90% {
+    color: violet;
+  }
+  100% {
+    transform: rotate(14400deg);
+  }
+}

@@ -1,17 +1,11 @@
 import Head from "next/head";
 import React from "react";
-import "../styles/global.css";
+import "../styles/global.scss";
 import { Analytics } from "@vercel/analytics/react";
-import "../styles/variables.css";
-import PageWithLayout from "../lib/PageWithLayout";
+import "../styles/variables.scss";
 import { ThemeProvider } from "next-themes";
 
-type AppLayoutProps = {
-  Component: PageWithLayout;
-  pageProps: any;
-};
-
-function MyApp({ Component, pageProps }: AppLayoutProps) {
+function MyApp({ Component, pageProps }: any) {
   const Layout = Component.layout || ((children) => <>{children}</>);
   return (
     <React.Fragment>

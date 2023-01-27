@@ -1,0 +1,15 @@
+.forma {
+  position: absolute;
+  z-index: 3;
+}
+.part1 {
+  height: 45vh;
+  padding: 0 20vw;
+  padding-top: 15vh;
+  max-height: 442.77px;
+}
+.part2 {
+  background-color: var(--main2);
+  height: 45vh;
+  clip-path: polygon(0% 20%, 100% 0px, 100% 100%, 0px 100%);
+}

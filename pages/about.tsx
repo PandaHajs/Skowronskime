@@ -1,43 +1,69 @@
 import Layout from "../lib/Layout";
 import { getAge } from "../lib/age";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 type AboutComponent = FC & { layout: typeof Layout };
+import styles from "../styles/about.module.scss";
 
 const About: AboutComponent = () => {
-  const [name, setName] = useState("");
-  useEffect(() => {
-    const names = [
-      "IT Student",
-      "Kac Biznesu",
-      "Some random guy",
-      "The perfect victim",
-    ];
-    setName(names[Math.floor(Math.random() * names.length)]);
-  }, []);
   const age = getAge();
   return (
     <>
-      <div className="part1">
-        <h1>Under construction</h1>
-        <p>Again...</p>
+      <div className={styles.part1}>
+        <h1>About me</h1>
+        <p>
+          I was born on [REDACTED] in [REDACTED], I&apos;m currently {age} years
+          old and living in Poznan, Poland. At this point in time I have only
+          primary education and finished more than half of my High School. I
+          have the CISCO ITE 5.0 certificate and I&apos;m undergoing the CISCO
+          CCNA1 course. I&apos;m not yet sure what I want to do in life, but
+          I&apos;m certain it will either be something in networking or web
+          development.
+        </p>
       </div>
-      <div className="part2"></div>
-      <style jsx>{`
-        p:first-of-type {
-          font-style: italic;
-          opacity: 0.5;
-        }
-        .part1 {
-          height: 50vh;
-          padding: 0 20vw;
-          padding-top: 15vh;
-        }
-        .part2 {
-          background-color: var(--main2);
-          height: 50vh;
-          clip-path: polygon(0% 14%, 100% 0px, 100% 100%, 0px 100%);
-        }
-      `}</style>
+      <div className={styles.projects}>
+        <a href="" className={styles.projecta}>
+          <div className={styles.projectdiv}>
+            <h1>Lorem Ipsum</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a
+              maximus erat, malesuada accumsan nibh. Nam eu tortor ac metus
+              tempus luctus.
+            </p>
+          </div>
+        </a>
+        <a href="" className={styles.projecta}>
+          <div className={styles.projectdiv}>
+            <h1>Lorem Ipsum</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a
+              maximus erat, malesuada accumsan nibh. Nam eu tortor ac metus
+              tempus luctus.
+            </p>
+          </div>
+        </a>
+        <a href="" className={styles.projecta}>
+          <div className={styles.projectdiv}>
+            <h1>Lorem Ipsum</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a
+              maximus erat, malesuada accumsan nibh. Nam eu tortor ac metus
+              tempus luctus.
+            </p>
+          </div>
+        </a>
+        <a href="" className={styles.projecta}>
+          <div className={styles.projectdiv}>
+            <h1>Lorem Ipsum</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a
+              maximus erat, malesuada accumsan nibh. Nam eu tortor ac metus
+              tempus luctus.
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div className={styles.part2}></div>
     </>
   );
 };
