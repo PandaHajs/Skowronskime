@@ -4,8 +4,14 @@ import "../styles/global.scss";
 import { Analytics } from "@vercel/analytics/react";
 import "../styles/variables.scss";
 import { ThemeProvider } from "next-themes";
+import PageWithLayout from "../lib/PageWithLayout";
 
-function MyApp({ Component, pageProps }: any) {
+type AppLayoutProps = {
+  Component: PageWithLayout;
+  pageProps: any;
+};
+
+function MyApp({ Component, pageProps }: AppLayoutProps) {
   const Layout = Component.layout || ((children) => <>{children}</>);
   return (
     <React.Fragment>
