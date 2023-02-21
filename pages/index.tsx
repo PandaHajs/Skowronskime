@@ -37,7 +37,7 @@ const Home: HomeComponent = () => {
           className={isTransition ? styles.animate : styles.hide}
           style={{ fontStyle: "italic", opacity: 0.5 }}
         >
-          {name}
+          {name || "..."}
         </p>
         <p>
           {indefeniteArticle(age)} {age} years old IT Student from Poland, with
