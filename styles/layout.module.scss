@@ -13,7 +13,6 @@
   padding: 5px;
   text-decoration: none;
   color: var(--text);
-  border: 1px solid var(--main);
   transition: 0.5s;
 }
 .headerbutton:active {
@@ -126,7 +125,6 @@
 }
 .headerp:hover {
   color: red;
-  border: 1px inset var(--main);
 }
 .footerp {
   padding: 5px;
