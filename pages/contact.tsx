@@ -28,7 +28,7 @@ const Contact: ContactComponent = () => {
           .send(serviceId, templateId, templateParams, publicKey)
           .then((response) => console.log(response))
           .then((error) => console.log(error));
-        setName("");b  
+        setName("");
         setEmail("");
         setMessage("");
         toast("Message sent!");
