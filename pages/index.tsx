@@ -35,7 +35,7 @@ const Home: HomeComponent = () => {
         <p
           onClick={rollName}
           className={isTransition ? styles.animate : styles.hide}
-          style={{ fontStyle: "italic", opacity: 0.5 }}
+          style={{ fontStyle: "italic", opacity: 0.5, userSelect: "none" }}
         >
           {name || "..."}
         </p>
