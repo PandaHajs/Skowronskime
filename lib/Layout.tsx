@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import styles from "../styles/layout.module.scss";
+import clsx from "clsx";
 type LayoutProps = {
   children: React.ReactNode;
 };
@@ -58,28 +59,35 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
         </button>
       </header>
       <ul className={isDrop ? styles.list : styles.list_hid}>
-        <button onClick={light} className={styles.listbuttonn}>
-          <picture className={theme == "dark" ? styles.hide : ""}>
-            <source srcSet="/moon.svg" type="image/svg" />
-            <img src="/moon.svg" alt="moon" className={styles.listimg} />
-          </picture>
-          <picture className={theme == "dark" ? "" : styles.hide}>
-            <source srcSet="/sun.svg" type="image/svg" />
-            <img src="/sun.svg" alt="sun" className={styles.listimg} />
-          </picture>
-          <p className={styles.listbuttp}>Toggle Mode</p>
+        <button
+          onClick={light}
+          className={clsx(styles.listbutton, styles.listbutton2)}
+        >
+          <span className={styles.listspan}>
+            <picture className={theme == "dark" ? styles.hide : ""}>
+              <source srcSet="/moon.svg" type="image/svg" />
+              <img src="/moon.svg" alt="moon" className={styles.listimg} />
+            </picture>
+            <picture className={theme == "dark" ? "" : styles.hide}>
+              <source srcSet="/sun.svg" type="image/svg" />
+              <img src="/sun.svg" alt="sun" className={styles.listimg} />
+            </picture>
+            <p className={styles.listbuttp}>Toggle Mode</p>
+          </span>
         </button>
         <button className={styles.listbutton}>
-          <picture>
-            <source srcSet="/code.svg" type="image/svg" />
-            <img src="/code.svg" alt="Code" className={styles.listimg} />
-          </picture>
-          <Link
-            href="https://github.com/PandaHajs/Skowronskime"
-            style={{ textDecoration: "none" }}
-          >
-            <p className={styles.listbuttp}>Source Code</p>
-          </Link>
+          <span className={styles.listspan}>
+            <picture>
+              <source srcSet="/code.svg" type="image/svg" />
+              <img src="/code.svg" alt="Code" className={styles.listimg} />
+            </picture>
+            <Link
+              href="https://github.com/PandaHajs/Skowronskime"
+              style={{ textDecoration: "none" }}
+            >
+              <p className={styles.listbuttp}>Source Code</p>
+            </Link>
+          </span>
         </button>
       </ul>
 

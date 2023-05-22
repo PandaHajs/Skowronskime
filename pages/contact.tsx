@@ -5,6 +5,7 @@ import styles from "../styles/contact.module.scss";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import cslx from "clsx";
 
 const Contact: ContactComponent = () => {
   const [name, setName] = useState("");
@@ -45,33 +46,6 @@ const Contact: ContactComponent = () => {
       <ToastContainer />
       <div className={styles.part1}>
         <div className={styles.forma}>
-          <p style={{ fontSize: "1.2rem" }}>
-            You can contact me through:
-            <br />
-            <a
-              style={{
-                fontSize: "1.2rem",
-                color: "red",
-                textDecoration: "none",
-              }}
-              href="mailto:kacpermariaskowronski@protonmail.com"
-            >
-              E-mail
-            </a>
-            <br />
-            <a
-              style={{
-                fontSize: "1.2rem",
-                color: "red",
-                textDecoration: "none",
-              }}
-              href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/"
-            >
-              LinkedIn
-            </a>
-            <br />
-            or fill in the contact form below:
-          </p>
           <p style={{ fontSize: "1.2rem" }}>Your full name: </p>
           <input
             type="text"
@@ -80,23 +54,49 @@ const Contact: ContactComponent = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <p style={{ fontSize: "1.2rem" }}>Your E-mail:</p>
+          <p style={{ fontSize: "1.2rem", marginTop: "0.5vh" }}>Your E-mail:</p>
           <input
             type="email"
             style={{ width: "30vw" }}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <p style={{ fontSize: "1.2rem" }}>Message:</p>
+          <p style={{ fontSize: "1.2rem", marginTop: "0.5vh" }}>Message:</p>
           <textarea
             name="message"
             onChange={(e) => setMessage(e.target.value)}
             value={message}
           />
-          <br />
-          <button onClick={submit} style={{ width: "60px" }}>
+          <button
+            onClick={submit}
+            style={{ width: "60px", marginTop: "0.5vh" }}
+          >
             Send
           </button>
+          <div>
+            <a
+              href="mailto:kacpermariaskowronski@protonmail.com"
+              className={styles.link}
+            >
+              <picture>
+                <source srcSet="/mail.svg" type="image/svg" />
+                <img src="/mail.svg" alt="mail" className={styles.image} />
+              </picture>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kacper-skowro%C5%84ski-854424230/"
+              className={styles.link}
+            >
+              <picture>
+                <source srcSet="/linkein.svg" type="image/svg" />
+                <img
+                  src="/linkedin.svg"
+                  alt="linkedin"
+                  className={cslx(styles.image, styles.image2)}
+                />
+              </picture>
+            </a>
+          </div>
         </div>
       </div>
       <div className={styles.part2}></div>
@@ -106,6 +106,8 @@ const Contact: ContactComponent = () => {
           height: 10vh;
           max-width: 50vw;
           max-height: 20vh;
+          min-width: 30vw;
+          min-height: 10vh;
         }
       `}</style>
     </>

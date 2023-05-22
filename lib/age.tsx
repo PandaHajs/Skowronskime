@@ -9,8 +9,8 @@ const getAge = () => {
   }
 };
 
-const indefeniteArticle = (age: number) => {
+const indefiniteArticle = (age: number) => {
   return [8, 11, 18].includes(age) ? "An" : "A";
 };
 
-export { getAge, indefeniteArticle };
+export { getAge, indefiniteArticle };

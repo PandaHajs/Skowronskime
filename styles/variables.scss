@@ -2,17 +2,22 @@
   --main: #26262a;
   --text: white;
   --button: black;
-  --filter: invert(100%);
+  --filter: invert(100%) opacity(0.5);
   --img_hover: #00ffcc;
-  --border: rgba(255, 255, 255, 0.5);
+  --border: rgba(240 240 240 / 60%);
   --main2: #28282c;
+  --backborder: #e3e3dc;
+  --filterhover: invert(100%) opacity(1);
+  --buttonhover: rgb(128 128 128 / 50%);
 }
 [data-theme="light"] {
   --text: black;
   --main: white;
   --button: gray;
   --img_hover: #ff0033;
-  --filter: invert(0);
-  --border: rgba(0, 0, 0, 0.5);
+  --filter: invert(0) opacity(0.5);
+  --border: rgba(25 25 25 / 60%);
   --main2: #f0f0f0;
+  --filterhover: invert(0) opacity(1);
+  --buttonhover: rgba(204, 201, 201, 0.5);
 }

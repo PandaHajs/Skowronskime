@@ -4,7 +4,7 @@
 .list {
   position: fixed;
   right: 15px;
-  top: 6vh;
+  top: 7vh;
   display: flex;
   flex-direction: column;
   z-index: 20;
@@ -15,35 +15,34 @@
   color: var(--text);
   transition: 0.5s;
 }
-.headerbutton:active {
-  background-color: gray;
-  border-radius: 50%;
-}
+
 .listbuttp {
   color: var(--text);
 }
 .listbutton {
-  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--button);
-  width: 200px;
-  height: 50px;
+  width: 10vw;
+  height: 5vh;
   border: none;
   transition: 0.5s;
 }
-.listbuttonn {
+.listbutton2 {
   border-bottom: 1px dashed var(--border);
-  padding: 10px;
+}
+.listspan {
   display: flex;
+  height: 3.5vh;
+  width: 10vw;
   align-items: center;
   justify-content: center;
-  background-color: var(--button);
-  width: 200px;
-  height: 50px;
-  border: none;
-  transition: 0.5s;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--buttonhover);
+  }
 }
 .list_hid {
   display: none;
@@ -56,18 +55,25 @@
 .headerbutton {
   margin-right: 50px;
   margin-top: 5px;
-  height: 35px;
-  width: 40px;
+  height: 6vh;
+  width: 3.5vw;
   background-color: transparent;
-  border: none;
   filter: var(--filter);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 25%;
+  border: 5px solid transparent;
+  transition: 0.2s;
+
+  &:hover {
+    border: 5px solid var(--border);
+    background-color: var(--backborder);
+    filter: var(--filterhover);
+  }
 }
 .headerimg {
-  height: 33px;
-  width: 33px;
+  height: 4vh;
 }
 .nav {
   display: flex;
@@ -80,7 +86,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 5%;
+  height: 7%;
   width: 100%;
   background-color: var(--main);
   transition: 0.5s;
@@ -92,12 +98,12 @@
 .footer {
   box-shadow: rgb(0 0 0 / 20%) 0px 0px 20px 0px;
   position: fixed;
-  top: 95%;
+  top: 93%;
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 5%;
+  height: 7%;
   width: 100%;
   background-color: var(--main2);
   transition: 0.5s;

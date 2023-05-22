@@ -1,10 +1,13 @@
 .forma {
-  position: absolute;
+  display: flex;
   z-index: 3;
+  flex-direction: column;
+  position: absolute;
 }
 .part1 {
   height: 45vh;
-  padding: 0 20vw;
+  padding-left: 30vw;
+  padding-right: 30vw;
   padding-top: 15vh;
   max-height: 442.77px;
 }
@@ -12,4 +15,25 @@
   background-color: var(--main2);
   height: 45vh;
   clip-path: polygon(0% 20%, 100% 0px, 100% 100%, 0px 100%);
+}
+
+.image {
+  position: absolute;
+  z-index: 4;
+  width: 3vw;
+  left: 8vw;
+  filter: var(--filter);
+  top: 30vh;
+  transition: 0.2s;
+
+  &:hover {
+    filter: var(--filter2);
+  }
+}
+.image2 {
+  left: 20vw;
+}
+
+.link {
+  width: 3vw;
 }

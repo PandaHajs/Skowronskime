@@ -1,6 +1,6 @@
 import Layout from "../lib/Layout";
 import { useEffect, FC, useState } from "react";
-import { getAge, indefeniteArticle } from "../lib/age";
+import { getAge, indefiniteArticle } from "../lib/age";
 type HomeComponent = FC & { layout: typeof Layout };
 import { getName } from "../lib/names";
 import styles from "../styles/index.module.scss";
@@ -40,7 +40,7 @@ const Home: HomeComponent = () => {
           {name || "..."}
         </p>
         <p>
-          {indefeniteArticle(age)} {age} years old IT Student from Poland, with
+          {indefiniteArticle(age)} {age} years old IT Student from Poland, with
           the life motto &quot;If I don&apos;t have to do it, I won&apos;t. If I
           have to do it, I&apos;ll make it quick.&quot; who for some reason made
           this site without having to.
