@@ -122,11 +122,19 @@
   height: 100vh;
 }
 @media (max-width: 768px) {
-  .listbut {
-    width: 150px;
+  .listbutton {
+    width: 25vw;
+    height: 5.5vh;
+  }
+  .listspan {
+    width: 25vw;
+    height: 4vh;
   }
   .listbuttp {
     font-size: 15px;
+  }
+  .headerbutton {
+    width: 15vw;
   }
 }
 .headerp:hover {

@@ -46,26 +46,27 @@ const Contact: ContactComponent = () => {
       <ToastContainer />
       <div className={styles.part1}>
         <div className={styles.forma}>
-          <p style={{ fontSize: "1.2rem" }}>Your full name: </p>
+          <p className={styles.text}>Your full name: </p>
           <input
             type="text"
             name="name"
-            style={{ width: "30vw" }}
+            className={styles.input1}
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <p style={{ fontSize: "1.2rem", marginTop: "0.5vh" }}>Your E-mail:</p>
+          <p className={styles.text}>Your E-mail:</p>
           <input
             type="email"
-            style={{ width: "30vw" }}
+            className={styles.input1}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <p style={{ fontSize: "1.2rem", marginTop: "0.5vh" }}>Message:</p>
+          <p className={styles.text}>Message:</p>
           <textarea
             name="message"
             onChange={(e) => setMessage(e.target.value)}
             value={message}
+            className={styles.input2}
           />
           <button
             onClick={submit}
@@ -100,16 +101,7 @@ const Contact: ContactComponent = () => {
         </div>
       </div>
       <div className={styles.part2}></div>
-      <style jsx>{`
-        textarea {
-          width: 30vw;
-          height: 10vh;
-          max-width: 50vw;
-          max-height: 20vh;
-          min-width: 30vw;
-          min-height: 10vh;
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </>
   );
 };

@@ -37,3 +37,38 @@
 .link {
   width: 3vw;
 }
+.text {
+  font-size: 1.2rem;
+  margin-top: 0.5vh;
+}
+.input1 {
+  width: 30vw;
+}
+.input2 {
+  width: 30vw;
+  height: 10vh;
+  max-width: 50vw;
+  max-height: 20vh;
+  min-width: 30vw;
+  min-height: 10vh;
+}
+
+@media (max-width: 768px) {
+  .part1 {
+    padding-top: 20vh;
+  }
+  .image {
+    top: 45vh;
+    width: 10vw;
+    left: 5vw;
+  }
+  .image2 {
+    left: 25vw;
+  }
+  .input1 {
+    width: 50vw;
+  }
+  .input2 {
+    width: 50vw;
+  }
+}
