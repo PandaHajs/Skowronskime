@@ -1,6 +1,6 @@
 import Layout from "../lib/Layout";
 import { useEffect, FC, useState } from "react";
-import { getAge, indefiniteArticle } from "../lib/age";
+import { getAge, indefiniteArticle } from "../lib/Age";
 type HomeComponent = FC & { layout: typeof Layout };
 import { getName } from "../lib/names";
 import styles from "../styles/index.module.scss";
