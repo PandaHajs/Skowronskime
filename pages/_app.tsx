@@ -4,7 +4,7 @@ import "../styles/global.scss";
 import { Analytics } from "@vercel/analytics/react";
 import "../styles/variables.scss";
 import { ThemeProvider } from "next-themes";
-import PageWithLayout from "../lib/PageWithLayout";
+import PageWithLayout from "../lib/page-with-layout";
 
 type AppLayoutProps = {
   Component: PageWithLayout;

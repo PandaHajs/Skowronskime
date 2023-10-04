@@ -1,4 +1,4 @@
-import Layout from "../lib/Layout";
+import Layout from "../lib/layout";
 import { FC, useState } from "react";
 type ContactComponent = FC & { layout: typeof Layout };
 import styles from "../styles/contact.module.scss";

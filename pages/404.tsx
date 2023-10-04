@@ -1,4 +1,4 @@
-import Layout from "../lib/Layout";
+import Layout from "../lib/layout";
 import { FC } from "react";
 type NoComponent = FC & { layout: typeof Layout };
 
