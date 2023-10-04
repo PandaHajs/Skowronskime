@@ -13,6 +13,4 @@ const indefiniteArticle = (age: number) => {
   return [8, 11, 18].includes(age) ? "An" : "A";
 };
 
-//test
-
 export { getAge, indefiniteArticle };

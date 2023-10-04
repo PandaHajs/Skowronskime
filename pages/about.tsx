@@ -1,5 +1,5 @@
 import Layout from "../lib/Layout";
-import { getAge } from "../lib/Age";
+import { getAge } from "../lib/age";
 import { FC } from "react";
 type AboutComponent = FC & { layout: typeof Layout };
 import styles from "../styles/about.module.scss";
