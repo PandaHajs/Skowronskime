@@ -11,8 +11,8 @@ const About: AboutComponent = () => {
       <div className={styles.part1}>
         <h1>About me</h1>
         <p>
-          I was born on [REDACTED] in [REDACTED], I&apos;m currently {age} years
-          old and living in Poznan, Poland. At this point in time I have only
+          I was born on [REDACTED] in 2004, I&apos;m currently {age} years old
+          and living in Poznan, Poland. At this point in time I have only
           primary education and finished more than half of my High School. I
           have the CISCO ITE 5.0 certificate and succesfully underwent the CISCO
           CCNA1 course (I&apos;m not certified tho). I&apos;m not yet sure what
