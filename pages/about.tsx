@@ -23,7 +23,7 @@ const About: AboutComponent = () => {
       <div className={styles.projects}>
         <a href="" className={styles.projecta}>
           <div className={styles.projectdiv}>
-            <h1>Lorem Ipsum</h1>
+            <h2>Lorem Ipsum</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a
               maximus erat, malesuada accumsan nibh. Nam eu tortor ac metus
@@ -33,7 +33,7 @@ const About: AboutComponent = () => {
         </a>
         <a href="" className={styles.projecta}>
           <div className={styles.projectdiv}>
-            <h1>Lorem Ipsum</h1>
+            <h2>Lorem Ipsum</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a
               maximus erat, malesuada accumsan nibh. Nam eu tortor ac metus
