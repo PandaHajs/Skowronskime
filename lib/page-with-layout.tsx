@@ -1,4 +1,4 @@
-import Layout from "./Layout";
+import Layout from "./layout";
 import { FC } from "react";
 
 type PageWithLayout = FC & { layout: typeof Layout };
